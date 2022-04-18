@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>RegistrationForm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/modal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div id="main">
+        <div class="modal">
+            <div class="modal-noti">
+                <h1>Chúc mừng</h1>
+                <p>Bạn đã đăng kí thành công</p>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="inner">
+                <form class="" id="form-signUp">
+                    <h3>Registration</h3>
+                    <p class="error"></p>
+                    <div class="row">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username" id="name" class="form-control">
+                        <span id="error-message"></span>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="text" placeholder="E-mail" id="email" class="form-control">
+                        <span id="error-message"></span>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" id="psw" class="form-control"
+                            style="font-size: 15px;">
+                        <span id="error-message"></span>
+                    </div>
+                    <div class="row">
+                        <i class="fa-solid fa-lock-open"></i>
+                        <input type="password" placeholder="Confirm Password" id="confirm" class="form-control"
+                            style="font-size: 15px;">
+                        <span id="error-message"></span>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" checked> I agree all statement in <a href="#">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    <div class="form-login">
+                        <button type="button" onclick="saveData()" class="signup">Sign up</button>
+                        <p>Already Have account? <a href="./login.html">Login</a></p>
+                    </div>
+                </form>
+                <div class="image-holder">
+                    <img src="../img/registration-form-4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script>
+        Validator({
+            form: '#form-signUp',
+            formGroupSelector: '.row',
+            errorSelector: '#error-message',
+            rules: [
+                Validator.isRequired('#name', 'Vui lòng nhập trường này'),
+                Validator.isEmail('#email'),
+                Validator.minLength('#psw', 6),
+                Validator.isRequired('#confirm'),
+                Validator.isConfirmed('#confirm', function () {
+                    return document.querySelector('#form-signUp #psw').value
+                }, 'Mật khẩu nhập lại không chính xác')
+            ]
+        })
+    </script>
+</body>
+
+</html>

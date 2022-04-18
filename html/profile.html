@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <div class="profile">
+            <div class="goBack">
+                <button type="button" onclick="Logout()">Dang xuat</button>
+                <button type="button" onclick="returnHome()">Tro ve trang chu</button>
+            </div>
+            <h1>Ho So cua toi</h1>
+            <hr>
+            <div class="myprofile row">
+                <div class="profile-content col-md-6">
+                    <div class="avaiprofile">
+                        <h3>Username:
+                            <script>document.write(localStorage.getItem('name'))</script>
+                        </h3>
+                        <h3>Email:
+                            <script>document.write(localStorage.getItem('email'))</script>
+                        </h3>
+                    </div>
+                    <div class="fullprofile">
+                        <h3>Fullname:
+                            <script>
+                                const fullname = localStorage.getItem('fullname')
+                                if (fullname != null) {
+                                    document.write(fullname)
+                                } else {
+                                    document.write('chua co thong tin')
+                                }
+                            </script>
+                        </h3>
+                        <h3>Address:
+                            <script>
+                                const address = localStorage.getItem('address')
+                                if (address != null) {
+                                    document.write(address)
+                                } else {
+                                    document.write('chua co thong tin')
+                                }
+                            </script>
+                        </h3>
+                        <h3>So Dien Thoai:
+                            <script>
+                                const phoneNumber = localStorage.getItem('phoneNumber')
+                                if (phoneNumber != null) {
+                                    document.write(phoneNumber)
+                                } else {
+                                    document.write('chua co thong tin')
+                                }
+                            </script>
+                        </h3>
+                        <h3>Thanh Pho:
+                            <script>
+                                const city = localStorage.getItem('city')
+                                if (city != null) {
+                                    document.write(city)
+                                } else {
+                                    document.write('chua co thong tin')
+                                }
+                            </script>
+                        </h3>
+                    </div>
+                </div>
+                <div class="profile-avatar col-md-6">
+                    <section>
+                        <h3>Anh dai dien</h3>
+                        <!-- <div class="card testimonial-card">
+                            <div class="card-up" style="background-color: #6d5b98;"></div>
+                            <div class="avatar mx-auto bg-white">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                                    class="rounded-circle img-fluid" />
+                            </div>
+                            <div class="card-body">
+                                <h4 class="mb-4">John Smith</h4>
+                            </div>
+                        </div> -->
+                        <div class="avatar-wrapper">
+                            <img class="profile-pic" src="../img/unknow.jpg" />
+                            <div class="upload-button">
+                            </div>
+                            <input class="file-upload" type="file" accept="image/*" />
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <button class="complete"> + Complete your profile</button>
+            <div class="modal" tabindex="-1" role="dialog" id="ModalProfile">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Hoan Thanh Profile cua ban</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span id="close-icon" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="myForm">
+                                <div class="form-group row">
+                                    <label for="fullname" class="col-sm-3 col-form-label">Ho ten</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" placeholder="VD: Nguyen Van A" class="form-control"
+                                            id="fullname">
+                                    </div>
+                                    <span class="errorName"></span>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="address" class="col-sm-3 col-form-label">Dia chi</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="address"
+                                            placeholder="Nguyen Thi Minh Khai, Q1, TP.HCM">
+                                    </div>
+                                    <span class="errorAddress"></span>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="phoneNumber" class="col-sm-3 col-form-label">So dien thoai</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="phoneNumber"
+                                            placeholder="84+ 0123456789">
+                                    </div>
+                                    <span class="errorphoneNum"></span>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="city" class="col-sm-3 col-form-label">Tinh/Thanh pho</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="city"
+                                            placeholder="Ho Chi Minh City">
+                                    </div>
+                                    <span class="errorCity"></span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" onclick="saveFullProfile() " class="btn btn-save btn-primary">Save
+                                changes</button>
+                            <button type="button" id="close" class="btn btn-secondary"
+                                data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var readURL = (input) => {
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        const datarecent = localStorage.getItem('img')
+                        $('.profile-pic').attr('src', datarecent)
+                        localStorage.setItem('img', e.target.result)
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+            $(".file-upload").on('change', () => {
+                readURL(this);
+            });
+
+            $(".upload-button").on('click', () => {
+                $(".file-upload").click();
+            });
+            $('.complete').click(() => {
+                $('#ModalProfile').modal()
+            })
+            $('#close, #close-icon').click(() => {
+                $('#myForm')[0].reset()
+            })
+            console.log($('#close-icon'))
+            $('.btn-save').click(() => {
+                const fullname = $('#fullname').val()
+                const address = $('#address').val()
+                const phoneNumber = $('#phoneNumber').val()
+                const city = $('#city').val()
+                if (fullname !== '' || address !== '' || phoneNumber !== '' || city !== '') {
+                    $('#ModalProfile').modal('hide')
+                    $('.fullprofile').addClass('show')
+                    $('#myForm')[0].reset()
+                }
+                else {
+                    alert('ple')
+                    return false
+                }
+            })
+            const checkFullname = () => {
+                const fullname = $('#fullname').val()
+                const regName = /[A-Za-z]/gi
+                if (fullname.trim() === "") {
+                    $('.errorName').html('The field is required')
+                    return false
+                }
+                if (!regName.test(fullname)) {
+                    $('.errorName').html('Ho ten khong duoc co so va ky tu dac biet')
+                    return false
+                }
+                $('.errorName').html('')
+                return true
+            }
+            $('#fullname').blur(checkFullname)
+            const checkAddress = () => {
+                const address = $('#address').val()
+                if (address.trim() === "") {
+                    $('.errorAddress').html('The field is required')
+                    return false
+                }
+                $('.errorAddress').html('')
+                return true
+            }
+            $('#address').blur(checkAddress)
+            const checkphoneNum = () => {
+                const phoneNumber = $('#phoneNumber').val()
+                const regNum = /^[0-9]{9,10}$/
+                if (phoneNumber.trim() === "") {
+                    $('.errorphoneNum').html('The field is required')
+                    return false
+                }
+                if (!regNum.test(phoneNumber)) {
+                    $('.errorphoneNum').html('Sdt khong chua ky tu va chi duoc 9 - 10 so')
+                    return false
+                }
+                $('.errorphoneNum').html('')
+                return true
+            }
+            $('#phoneNumber').blur(checkphoneNum)
+            const checkCity = () => {
+                const city = $('#city').val()
+                const regCity = /^(\w+[^\d])\s(\w+[^\d])\s(\w+[^\d])$|^(\w+^\d)\s(\w+^\d)$/
+                if (city.trim() === "") {
+                    $('.errorCity').html('The field is required')
+                    return false
+                }
+                if (!regCity.test(city)) {
+                    $('.errorCity').html('Ten Thanh Pho phai co khoang trang')
+                    return false
+                }
+                $('.errorCity').html('')
+                return true
+            }
+            $('#city').blur(checkCity)
+        });
+    </script>
+    <script>
+    </script>
+    <script>
+        let name = localStorage.getItem('name') ? localStorage.getItem('name') : ''
+        if (name == '') {
+            alert('Ban can dang nhap truoc');
+            window.location.href = "login.html";
+        }
+        const profile = document.querySelector('.fullprofile')
+        function saveFullProfile() {
+            const fullname = document.getElementById('fullname').value
+            const address = document.getElementById('address').value
+            const phoneNumber = document.getElementById('phoneNumber').value
+            const city = document.getElementById('city').value
+            const userData = JSON.parse(localStorage.getItem('users'))
+            const user = userData.find(el => el.name == name)
+            const news = {
+                "fullname": fullname,
+                "address": address,
+                "phoneNumber": phoneNumber,
+                "city": city
+            }
+            let arr = JSON.parse(localStorage.getItem('arr')) ? JSON.parse(localStorage.getItem('arr')):[]
+            const fullProfile = Object.assign(user, news)
+            let checkName = arr.find(el => el.name === user.name)
+            if((fullname != '' || address != '' || phoneNumber != '' || city != '') || (checkName != checkName)) {
+                arr.push(fullProfile)
+            }
+            JSON.parse(localStorage.getItem('arr'))
+            localStorage.setItem('arr', JSON.stringify(arr))
+            console.log(JSON.parse(localStorage.getItem('arr')))
+            let check = arr.find(el => el.name === user.name)
+            if (check) {
+                localStorage.setItem('fullname', check.fullname)
+                localStorage.setItem('address', check.address)
+                localStorage.setItem('phoneNumber', check.phoneNumber)
+                localStorage.setItem('city', check.city)
+            }
+            window.location.reload()
+        }
+        function returnHome() {
+            window.location.href = 'index.html'
+        }
+        function Logout() {
+            localStorage.removeItem('name');
+            localStorage.removeItem('email');
+            localStorage.removeItem('fullname');
+            localStorage.removeItem('address');
+            localStorage.removeItem('phoneNumber');
+            localStorage.removeItem('city')
+            localStorage.removeItem('img')
+            // localStorage.removeItem('FullProfile')
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+
+</html>
