@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/allproducts.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <title>Document</title>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/main.js"></script> -->
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div id="header">
+            <div class="row head">
+                <div class="col-md-3">
+                    <nav class="nav nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link p-0 img-fluid" href="#">
+                                <img src="../img/logo-weskin.svg" alt="" width="160px">
+                            </a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="col-md-6 row ">
+                    <div class="form-group form-inline w-100 justify-content-center">
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control dl-block w-100" id="search-text"
+                                placeholder="Search product...">
+                            <button class="btn btn-dark" id="btn-search">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 align-items-center row justify-content-end">
+                    <div class="row">
+                        <div class="col login d-flex align-items-center">
+                            <div class="account">
+                                <a name="" id="" class="btn" href="login.html" role="button">đăng nhập</a>
+                                <a name="" id="" class="btn" href="registration.html" role="button">đăng ký</a>
+                            </div>
+                            <div class="shopping">
+                                <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-sm-1"></div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="#">trang chủ <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="#">thành viên</a>
+                        </li>
+                        <li class="nav-item dropdown bridge collapse-item">
+                            <a class="nav-link p-0 scroll-bar text-dark" href="#" id="navbarDropdown">
+                                sản phẩm
+                                <i class=" fa-solid fa-caret-down"></i>
+                            </a>
+                            <div class="subnav row">
+                                <div class="subnav-list">
+                                    <h5>Dưỡng da</h5>
+                                    <ul>
+                                        <li><a href="">Mặt nạ</a></li>
+                                        <li><a href="">Kem dưỡng</a></li>
+                                        <li><a href="">Kem chống nắng</a></li>
+                                        <li><a href="">Xịt khoáng</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Làm sạch</h5>
+                                    <ul>
+                                        <li><a href="">Sữa rửa mặt</a></li>
+                                        <li><a href="">Kem tẩy trang</a></li>
+                                        <li><a href="">Dầu tẩy trang</a></li>
+                                        <li><a href="">Nước tẩy trang</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Trang điểm nền</h5>
+                                    <ul>
+                                        <li><a href="">Kem lót</a></li>
+                                        <li><a href="">Kem tạo hiệu ứng</a></li>
+                                        <li><a href="">Kem che khuyết điểm</a></li>
+                                        <li><a href="">Phần phủ bột</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Trang điểm mắt môi</h5>
+                                    <ul>
+                                        <li><a href="">Son thỏi</a></li>
+                                        <li><a href="">Son dưỡng</a></li>
+                                        <li><a href="">Màu mắt</a></li>
+                                        <li><a href="">Viền mắt</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Chăm sóc cơ thể</h5>
+                                    <ul>
+                                        <li><a href="">Sữa tắm</a></li>
+                                        <li><a href="">Sữa dưỡng thể</a></li>
+                                        <li><a href="">Nước hoa</a></li>
+                                        <li><a href="">Dầu gội, dầu xả</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Dược mỹ phẩm</h5>
+                                    <ul>
+                                        <li><a href="">Dưỡng ẩm da</a></li>
+                                        <li><a href="">Dưỡng trắng da</a></li>
+                                        <li><a href="">Chống lão hóa da</a></li>
+                                        <li><a href="">Tẩy tế bào chết</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Sức khỏe - làm đẹp</h5>
+                                    <ul>
+                                        <li><a href="">Tinh dầu</a></li>
+                                        <li><a href="">Nước tẩy trang</a></li>
+                                        <li><a href="">Thực phẩm làm đepk</a></li>
+                                        <li><a href="">Nước hoa</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Thực phẩm chức năng</h5>
+                                    <ul>
+                                        <li><a href="">Vitamin & Khoáng chất</a></li>
+                                        <li><a href="">Chống lão hóa da</a></li>
+                                        <li><a href="">Sữa dưỡng thể</a></li>
+                                        <li><a href="">Dầu tẩy trang</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="">tin tức</a>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="">liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+    </div>
+    <div class="container-fluid content">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="row col-md-10 text-left">
+                <div class="col-md-3 border-right">
+                    <div class="category-menu">
+                        <h4>DANH MỤC</h4>
+                        <div class="navbar navbar-nav category">
+                            <ul>
+                                <li class="nav-item"><a href="" class="nav-link">trang chủ</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">thành viên</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        sản phẩm
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                        <a class="dropdown-item" href="#">dưỡng da</a>
+                                        <a class="dropdown-item" href="#">làm sạch </a>
+                                        <a class="dropdown-item" href="#">trang điểm nền</a>
+                                        <a class="dropdown-item" href="#">Trang điểm mắt môi</a>
+                                        <a class="dropdown-item" href="#">Chăm sóc cơ thể</a>
+                                        <a class="dropdown-item" href="#">Sức khỏe - làm đẹp</a>
+                                        <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+
+                                    </div>
+                                </li>
+                                <li class="nav-item"><a href="" class="nav-link">tin tức</a></li>
+                                <li class="nav-item"><a href="" class="nav-link">liên hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dsnoibat">
+                        <h4>Sản phẩm nổi bật</h4>
+                        <div class="row p-2 m-2 border-bottom">
+                            <div class="col-sm-12 d-flex">
+                                <div class="item-small">
+                                    <a href=""><img src="../img/products/small1.png"
+                                            alt="Dung dịch giúp loại bỏ sơn móng" width="75%"></a>
+
+                                </div>
+                                <div class="products-info">
+                                    <p>Dung dịch giúp loại bỏ sơn móng</p>
+                                    <span class="text-danger">200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 m-2 border-bottom">
+                            <div class="col-sm-12 d-flex">
+                                <div class="item-small">
+                                    <a href=""><img src="../img/products/small2.png" alt="" width="75%"></a>
+                                </div>
+                                <div class="products-info">
+                                    <p>kem chống nắng AHA</p>
+                                    <span class="text-danger">200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 m-2 border-bottom">
+                            <div class="col-sm-12 d-flex">
+                                <div class="item-small">
+                                    <a href=""><img src="../img/products/small3.png" alt="" width="75%"></a>
+
+                                </div>
+                                <div class="products-info">
+                                    <p>Kem lót Burberry Fresh Glow</p>
+                                    <span class="text-danger">200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 m-2 border-bottom">
+                            <div class="col-sm-12 d-flex">
+                                <div class="item-small">
+                                    <a href=""><img src="../img/products/small4.png" alt="" width="75%"></a>
+
+                                </div>
+                                <div class="products-info">
+                                    <p>Nước hoa Chloé Eau de Parfum</p>
+                                    <span class="text-danger">1.500.000đ</span> <span
+                                        class="sale text-dark">2.000.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 m-2 border-bottom">
+                            <div class="col-sm-12 d-flex">
+                                <div class="item-small">
+                                    <a href=""><img src="../img/products/small5.png" alt="" width="75%"></a>
+
+                                </div>
+                                <div class="products-info">
+                                    <p>Nước hoa Yves Saint Laurent Black</p>
+                                    <span class="text-danger">1.200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-2 m-2 ">
+                            <div class="col-sm-12 d-flex">
+                                <div class="item-small">
+                                    <a href=""><img src="../img/products/small1.png"
+                                            alt="Dung dịch giúp loại bỏ sơn móng" width="75%"></a>
+
+                                </div>
+                                <div class="products-info">
+                                    <p>Dung dịch giúp loại bỏ sơn móng</p>
+                                    <span class="text-danger">200.000đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9  allproducts">
+                    <h4>TẤT CÁ SẢN PHẨM</h4>
+                    <div class="row justify-content-between">
+                        <div class="cover-card announcement"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <script>
+        const listProduct = [
+            {
+                id: 1,
+                productCode: 'WSVN01',
+                name: 'Sữa tắm Victoria’s Secret quyến rũ',
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '840,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/suatam.png'
+            },
+            {
+                id: 2,
+                productCode: 'WSVN02',
+                name: "Kem dưỡng ẩm L'Occitane Pivoine",
+                trademark: 'Nature',
+                status: 'Con Hang',
+                unitprice: '840,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/kemduong.jpg'
+            },
+            {
+                id: 3,
+                productCode: 'WSVN03',
+                name: 'Nước làm sạch mặt Ibuki Softening',
+                trademark: 'Bioshi',
+                status: 'Con Hang',
+                unitprice: '1,240,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/nuoclamsachmat.jpg'
+            },
+            {
+                id: 4,
+                productCode: 'WSVN04',
+                name: 'Tinh chất dưỡng da SK-II Facial',
+                trademark: 'Bioshi',
+                status: 'Con Hang',
+                unitprice: '4,100,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/taytrangbioderma.jpg'
+            },
+            {
+                id: 5,
+                productCode: 'WSVN05',
+                name: 'Son dưỡng Tonymoly Mini Cherry',
+                trademark: 'Soojin',
+                status: 'Con Hang',
+                unitprice: '200,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/sonduong.jpg'
+            },
+            {
+                id: 6,
+                productCode: 'WSVN06',
+                name: 'Nước hoa Lancôme La Vie Est',
+                trademark: 'Lancôme',
+                status: 'Con Hang',
+                unitprice: '1,240,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/nuochoa.jpg'
+            },
+            {
+                id: 7,
+                productCode: 'WSVN07',
+                name: 'Sữa tắm làm sáng da Victoria’s Secret',
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '1,400,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/suatamlamsangda.jpg'
+            },
+            {
+                id: 8,
+                productCode: 'WSVN08',
+                name: 'Sữa tắm hương dâu dịu mát',
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '1,400,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/suatamhuongdau.jpg'
+            },
+            {
+                id: 9,
+                productCode: 'WSVN09',
+                name: 'Sữa tắm dưỡng ẩm cho da',
+                trademark: 'Nature',
+                status: 'Het Hang',
+                unitprice: '600,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/suatamduongam.jpg'
+            },
+            {
+                id: 10,
+                productCode: 'WSVN10',
+                name: 'Sữa tắm Sparkling Citrus Luscious Crush',
+                trademark: 'Nature',
+                status: 'Het Hang',
+                unitprice: '1,040,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/suatamsparkling.jpg'
+            },
+            {
+                id: 11,
+                productCode: 'WSVN11',
+                name: 'Kem lót Burberry Fresh Glow',
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '200.000đ',
+                information: 'Thong tin...',
+                img: '../img/products/kemlot.jpg'
+            },
+            {
+                id: 12,
+                productCode: 'WSVN12',
+                name: 'Son môi Christian Louboutin Silky',
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '1,800,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/sonmoichirstian.jpg'
+            },
+            {
+                id: 13,
+                productCode: 'WSVN13',
+                name: "Mascara Benefit They're Real",
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '480,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/mascara.jpg'
+            },
+            {
+                id: 14,
+                productCode: 'WSVN14',
+                name: 'Nước hoa Versace Bright Crystal',
+                trademark: 'Missha',
+                status: 'Con Hang',
+                unitprice: '1,000,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/nuochoaversace.jpg'
+            },
+            {
+                id: 15,
+                productCode: 'WSVN15',
+                name: 'Phấn nền bareMinerals Original',
+                trademark: 'Lacôme',
+                status: 'Con Hang',
+                unitprice: '560,000₫',
+                information: 'Thong tin...',
+                img: '../img/products/phannen.jpg'
+            }
+        ]
+        localStorage.setItem('product', JSON.stringify(listProduct))
+        const productData = JSON.parse(localStorage.getItem('product'))
+        $(document).ready(() => {
+            const display = (product) => {
+                const card =
+                    `<div class="card col-md-3">
+                    <a href="productDetail.html" onclick="setId(${product.id})">
+                        <div>
+                            <img class="card-img-top" src="${product.img}" alt="Card image cap">
+                        </div>
+                        <div class="card-body">
+                            <a href="" style="text-decoration: none;">
+                                <h5 class="card-title">${product.name}</h5>
+                            </a>
+                            <p class="card-text">${product.unitprice}</p>
+                        </div>
+                    </a>
+                </div>
+                `
+                $('.cover-card').append(card)
+            }
+            const setId = (id) => {
+                localStorage.setItem('id', id);
+            }
+            productData.forEach(el => {
+                display(el)
+            })
+            $('#btn-search').click(() => {
+                const productCode = $('#search-text').val()
+                if (productCode.trim() === '' || productCode == '') {
+                    $('.announcement').html('')
+                    productData.forEach(display)
+                    return true
+                }
+                const findproductCode = productData.find(el => el.productCode == productCode)
+                console.log(findproductCode)
+                if (findproductCode == undefined) {
+                    $('.announcement').html('<i>Khong tim thay san pham</i>')
+                    return false
+                }
+                $('.announcement').html('')
+                display(findproductCode)
+                return true;
+            })
+        })
+    </script>
+</body>
+
+</html>

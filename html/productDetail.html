@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/productDetail.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="row head">
+            <div class="col-md-3">
+                <nav class="nav nav-fill">
+                    <li class="nav-item">
+                        <a class="nav-link p-0 img-fluid" href="#">
+                            <img src="../img/logo-weskin.svg" alt="" width="160px">
+                        </a>
+                    </li>
+                </nav>
+            </div>
+            <div class="col-md-6 row ">
+                <div class="form-group form-inline w-100 justify-content-center">
+                    <div class="search">
+                        <i class="fa fa-search"></i>
+                        <input type="text" class="form-control dl-block w-100" placeholder="Search product...">
+                        <button class="btn btn-dark">Search</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 align-items-center row justify-content-end">
+                <div class="row">
+                    <div class="col login d-flex align-items-center">
+                        <div class="account">
+                            <a name="" id="" class="btn" href="login.html" role="button">Dang Nhap</a>
+                            <a name="" id="" class="btn" href="login.html" role="button">Dang Ky</a>
+                        </div>
+                        <div class="shopping">
+                            <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="col-sm-1"></div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active collapse-item">
+                        <a class="nav-link p-0 scroll-bar" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item collapse-item">
+                        <a class="nav-link p-0 scroll-bar" href="#">Member</a>
+                    </li>
+                    <li class="nav-item dropdown bridge collapse-item">
+                        <a class="nav-link p-0 scroll-bar" href="#" id="navbarDropdown"">
+                            Products
+                            <i class=" fa-solid fa-caret-down"></i>
+                        </a>
+                        <div class="subnav row">
+                            <div class="subnav-list">
+                                <h5>Dưỡng da</h5>
+                                <ul>
+                                    <li><a href="">Mặt nạ</a></li>
+                                    <li><a href="">Kem dưỡng</a></li>
+                                    <li><a href="">Kem chống nắng</a></li>
+                                    <li><a href="">Xịt khoáng</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Làm sạch</h5>
+                                <ul>
+                                    <li><a href="">Sữa rửa mặt</a></li>
+                                    <li><a href="">Kem tẩy trang</a></li>
+                                    <li><a href="">Dầu tẩy trang</a></li>
+                                    <li><a href="">Nước tẩy trang</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Trang điểm nền</h5>
+                                <ul>
+                                    <li><a href="">Kem lót</a></li>
+                                    <li><a href="">Kem tạo hiệu ứng</a></li>
+                                    <li><a href="">Kem che khuyết điểm</a></li>
+                                    <li><a href="">Phần phủ bột</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Trang điểm mắt môi</h5>
+                                <ul>
+                                    <li><a href="">Son thỏi</a></li>
+                                    <li><a href="">Son dưỡng</a></li>
+                                    <li><a href="">Màu mắt</a></li>
+                                    <li><a href="">Viền mắt</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Chăm sóc cơ thể</h5>
+                                <ul>
+                                    <li><a href="">Sữa tắm</a></li>
+                                    <li><a href="">Sữa dưỡng thể</a></li>
+                                    <li><a href="">Nước hoa</a></li>
+                                    <li><a href="">Dầu gội, dầu xả</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Dược mỹ phẩm</h5>
+                                <ul>
+                                    <li><a href="">Dưỡng ẩm da</a></li>
+                                    <li><a href="">Dưỡng trắng da</a></li>
+                                    <li><a href="">Chống lão hóa da</a></li>
+                                    <li><a href="">Tẩy tế bào chết</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Sức khỏe - làm đẹp</h5>
+                                <ul>
+                                    <li><a href="">Tinh dầu</a></li>
+                                    <li><a href="">Nước tẩy trang</a></li>
+                                    <li><a href="">Thực phẩm làm đepk</a></li>
+                                    <li><a href="">Nước hoa</a></li>
+                                </ul>
+                            </div>
+                            <div class="subnav-list">
+                                <h5>Thực phẩm chức năng</h5>
+                                <ul>
+                                    <li><a href="">Vitamin & Khoáng chất</a></li>
+                                    <li><a href="">Chống lão hóa da</a></li>
+                                    <li><a href="">Sữa dưỡng thể</a></li>
+                                    <li><a href="">Dầu tẩy trang</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item collapse-item">
+                        <a class="nav-link p-0 scroll-bar" href="">Introduction</a>
+                    </li>
+                    <li class="nav-item collapse-item">
+                        <a class="nav-link p-0 scroll-bar" href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="content">
+        <div class="row details container-fluid p-0 m-0">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 row">
+                <div class="col-md-6">
+                    <div class="productdetail-img">
+                        <img src="../img/chongnang2.jpg" alt="" id="img-product">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="productdetail-info">
+                        <h1 class="productdetail-title"></h1>
+                        <p>Ma san pham: <span class="productCode"></span></p>
+                        <p>Thuong Hieu: <span class="trademark"></span> | Tinh trang: <span class="status"></span></p>
+                        <span class="money"></span>
+                        <p class="information"></p>
+                        <div class="quantity">
+                            <span>So luong: </span>
+                            <div class="icon-quantity">
+                                <span class="decrease">-</span>
+                                <span class="quantityNumber">
+                                    <input type="text" id="number" value="1">
+                                </span>
+                                <span class="increase">+</span>
+                            </div>
+                        </div>
+                        <p class="add-productdetail">Them vao gio hang</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+        <div class="container-fluid row onsale">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 products-onsale">
+                <h1 class="header-title">
+                    <a>San Pham Lien Quan</a>
+                </h1>
+                <div class="row justify-content-between">
+                    <div class="product">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
+                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                        </svg>
+                        <div class="product-detail">
+                            <a href="" class="detail-link">
+                                <div class="product-img">
+                                    <img src="../img/chongnang2.jpg" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <p>Kem chong nang</p>
+                                    <span>500.000d</span>
+                                </div>
+                                <a href="" class="add-product">Them vao gio hang</a>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="product">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
+                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                        </svg>
+                        <div class="product-detail">
+                            <a href="" class="detail-link">
+                                <div class="product-img">
+                                    <img src="../img/106805827_3073114916089902_5712309669648681849_n-500x500.png"
+                                        alt="">
+                                </div>
+                                <div class="product-info">
+                                    <p>Kem chong nang</p>
+                                    <span>500.000d</span>
+                                </div>
+                                <a href="" class="add-product">Them vao gio hang</a>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="product">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
+                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                        </svg>
+                        <div class="product-detail">
+                            <a href="" class="detail-link">
+                                <div class="product-img">
+                                    <img src="../img/1f466aa4b99a4bc4128b-768x768.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <p>Kem chong nang</p>
+                                    <span>500.000d</span>
+                                </div>
+                                <a href="" class="add-product">Them vao gio hang</a>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="product">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
+                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                        </svg>
+                        <div class="product-detail">
+                            <a href="" class="detail-link">
+                                <div class="product-img">
+                                    <img src="../img/chikemayNYX.png" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <p>Kem chong nang</p>
+                                    <span>500.000d</span>
+                                </div>
+                                <a href="" class="add-product">Them vao gio hang</a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row container-fluid footer-contact">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10 row justify-content-around">
+                <div class="contact-info">
+                    <a href="" class="logo-link">
+                        <img src="../img/logo-weskin.svg" alt="" width="150px">
+                    </a>
+                    <div class="contact-info-title">
+                        <p>Shop mỹ phẩm We Skin</p>
+                        <p>Làm đẹp trở nên dễ dàng hơn</p>
+                    </div>
+                    <div class="contact-address">
+                        <p>Địa chỉ: 94 Trần Vĩ, Xã An Khánh, Huyện Hoài Đức, Hà Nội, Vietnam</p>
+                        <p>Hotline: 0986475123</p>
+                        <p>Email: weskin@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-customer row align-items-center">
+                    <div class="customer">
+                        <h3>Ho tro khach hang</h3>
+                        <div class="support">
+                            <ul>
+                                <li><a href="">Trang chu</a></li>
+                                <li><a href="">Gioi thieu</a></li>
+                                <li><a href="">San pham</a></li>
+                                <li><a href="">Khuyen mai</a></li>
+                                <li><a href="">Tin tuc</a></li>
+                                <li><a href="">Lien he</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="customer">
+                        <h3>Chinh Sach</h3>
+                        <div class="support">
+                            <ul>
+                                <li><a href="">Trang chu</a></li>
+                                <li><a href="">Gioi thieu</a></li>
+                                <li><a href="">San pham</a></li>
+                                <li><a href="">Khuyen mai</a></li>
+                                <li><a href="">Tin tuc</a></li>
+                                <li><a href="">Lien he</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-connect">
+                    <h3>Ket noi voi chung toi</h3>
+                    <div class="connect-icon">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-google"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <img src="../img/qrcode.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="footer-describe">
+            <p>&copy; Ban quyen 2022 |</p><a href="">Powered By Ha & Vinh</a>
+        </div>
+    </div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script>
+        const productList = JSON.parse(localStorage.getItem('product'))
+        console.log(productList)
+        const id = JSON.parse(localStorage.getItem('id'))
+        const findId = productList.find(el => el.id === id)
+        let count = 1;
+        const decrease = document.querySelector('.decrease')
+        const quantity = document.getElementById('number')
+        const increase = document.querySelector('.increase')
+        if(count == 0) {
+            
+        }
+        decrease.addEventListener('click', () => {
+            if(count > 0 ) {
+                quantity.setAttribute('value', `${count -= 1}`)
+            }
+        })
+        increase.addEventListener('click', () => {
+            quantity.setAttribute('value', `${count += 1}`)
+        })
+        $(document).ready(() => {
+            $('.productdetail-title').html(findId.name)
+            $('.trademark').html(findId.trademark)
+            $('.status').html(findId.status)
+            $('.money').html(findId.unitprice)
+            $('.information').html(findId.information)
+            $('.productCode').html(findId.productCode)
+            $('#img-product').attr('src', findId.img)
+            // $('.decrease').click(() => {
+            //     $('#number').attr('value', count--)
+            // })
+            // $('.increase').click(() => {
+            //     $('#number').attr('value', count++)
+            // })
+        })
+    </script>
+</body>
+
+</html>

@@ -37,8 +37,6 @@ const saveData = () => {
   }
 };
 
-
-
 //contructor Validator
 function Validator(options) {
   function getParent(element, selector) {
@@ -221,3 +219,17 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
     },
   };
 };
+
+$(document).ready(() => {
+  const productData = JSON.parse(localStorage.getItem('product'))
+  console.log(productData)
+  $("#btn-search").click(() => {
+    const name = $("#search-text").val();
+    if (name.trim() === "") {
+      $(".announcement").html("");
+      productData.forEach((el) => {
+        display(el);
+      });
+    }
+  });
+});
