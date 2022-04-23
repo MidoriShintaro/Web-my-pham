@@ -33,21 +33,39 @@
                     <div class="form-group form-inline w-100 justify-content-center">
                         <div class="search">
                             <i class="fa fa-search"></i>
-                            <input type="text" class="form-control dl-block w-100" id="search-text"
-                                placeholder="Search product...">
-                            <button class="btn btn-dark" id="btn-search">Search</button>
+                            <input type="text" class="form-control dl-block w-100" placeholder="Search product...">
+                            <button class="btn btn-dark">Search</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3 align-items-center row justify-content-end">
-                    <div class="row">
+                    <div class="row" style="margin-right: 38px;">
                         <div class="col login d-flex align-items-center">
                             <div class="account">
-                                <a name="" id="" class="btn" href="login.html" role="button">đăng nhập</a>
-                                <a name="" id="" class="btn" href="registration.html" role="button">đăng ký</a>
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-clipboard-user icon-user" id="dropdownMenuButton"
+                                        aria-haspopup="true" aria-expanded="false"></i>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="login.html">Đăng Nhập</a>
+                                        <a class="dropdown-item" href="registration.html">Đăng Kí</a>
+                                    </div>
+                                </div>
                             </div>
                             <div class="shopping">
-                                <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                <div class="shopping-cart">
+                                    <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                </div>
+                                <div class="cart">
+                                    <div class="cart-img show">
+                                        <img src="../img/empty-cart.webp" alt="" class="empty">
+                                    </div>
+                                    <div class="list-product">
+                                        <h1>Sản phẩm đã thêm</h1>
+                                        <ul class="list-cart">
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -63,15 +81,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="#">trang chủ <span
+                            <a class="nav-link p-0 scroll-bar" href="index.html">Trang Chủ <span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="#">thành viên</a>
+                            <a class="nav-link p-0 scroll-bar" href="about.html">Thành Viên</a>
                         </li>
                         <li class="nav-item dropdown bridge collapse-item">
-                            <a class="nav-link p-0 scroll-bar text-dark" href="#" id="navbarDropdown">
-                                sản phẩm
+                            <a class="nav-link p-0 scroll-bar text-dark font-weight-bold" href="allproducts.html"
+                                id="navbarDropdown">
+                                Sản Phẩm
                                 <i class=" fa-solid fa-caret-down"></i>
                             </a>
                             <div class="subnav row">
@@ -150,10 +169,10 @@
                             </div>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="">tin tức</a>
+                            <a class="nav-link p-0 scroll-bar" href="news.html">Tin tức</a>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="">liên hệ</a>
+                            <a class="nav-link p-0 scroll-bar" href="#lienhe">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
@@ -225,7 +244,7 @@
                         <div class="row p-2 m-2 border-bottom">
                             <div class="col-sm-12 d-flex">
                                 <div class="item-small">
-                                    <a href=""><img src="../img/products/small3.png" alt="" width="75%"></a>
+                                    <a href=""><img src="../img/small3.png" alt="" width="75%"></a>
 
                                 </div>
                                 <div class="products-info">
@@ -275,13 +294,81 @@
                     </div>
                 </div>
                 <div class="col-md-9  allproducts">
-                    <h4>TẤT CÁ SẢN PHẨM</h4>
+                    <h4>TẤT CẢ SẢN PHẨM</h4>
                     <div class="row justify-content-between">
                         <div class="cover-card announcement"></div>
                     </div>
                 </div>
             </div>
             <div class="col-md-1"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="row container-fluid footer-contact">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10 row justify-content-around">
+                <div class="contact-info">
+                    <a href="" class="logo-link">
+                        <img src="../img/logo-weskin.svg" alt="" width="150px">
+                    </a>
+                    <div class="contact-info-title">
+                        <p>Shop mỹ phẩm We Skin</p>
+                        <p>Làm đẹp trở nên dễ dàng hơn</p>
+                    </div>
+                    <div class="contact-address">
+                        <p>Địa chỉ: 94 Trần Vĩ, Xã An Khánh, Huyện Hoài Đức, Hà Nội, Vietnam</p>
+                        <p>Hotline: 0986475123</p>
+                        <p>Email: weskin@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-customer row align-items-center">
+                    <div class="customer">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <div class="support">
+                            <ul>
+                                <li><a href="">Trang chủ</a></li>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Sản phẩm</a></li>
+                                <li><a href="">Khuyến mãi</a></li>
+                                <li><a href="">Tin tức</a></li>
+                                <li><a href="">Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="customer">
+                        <h3>Chính sách</h3>
+                        <div class="support">
+                            <ul>
+                                <li><a href="">Trang chủ</a></li>
+                                <li><a href="">Giới thiệu</a></li>
+                                <li><a href="">Sản phẩm</a></li>
+                                <li><a href="">Khuyến mãi</a></li>
+                                <li><a href="">Tin tức</a></li>
+                                <li><a href="">Liên Hệ</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-connect">
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="connect-icon">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-google"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+
+                    <img src="../img/qrcode.jpg" alt="">
+                    <Figcaption>
+                        <H2 style="padding-right: 36px;">DONATE ME</H2>
+                    </Figcaption>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+        <div class="footer-describe">
+            <p>&copy; Copyright 2022 |</p><a href="">Powered By Ha & Vinh</a>
         </div>
     </div>
     <script>
@@ -439,31 +526,31 @@
         ]
         localStorage.setItem('product', JSON.stringify(listProduct))
         const productData = JSON.parse(localStorage.getItem('product'))
+        const display = (product) => {
+            const card =
+                `<div class="card col-md-3">
+                <a href="productDetail.html" onclick="setId(${product.id})">
+                    <div>
+                        <img class="card-img-top" src="${product.img}" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <a href="" style="text-decoration: none;">
+                            <h5 class="card-title">${product.name}</h5>
+                        </a>
+                        <p class="card-text">${product.unitprice}</p>
+                    </div>
+                </a>
+            </div>
+            `
+            $('.cover-card').append(card)
+        }
+        const setId = (id) => {
+            localStorage.setItem('id', id);
+        }
+        productData.forEach(el => {
+            display(el)
+        })
         $(document).ready(() => {
-            const display = (product) => {
-                const card =
-                    `<div class="card col-md-3">
-                    <a href="productDetail.html" onclick="setId(${product.id})">
-                        <div>
-                            <img class="card-img-top" src="${product.img}" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <a href="" style="text-decoration: none;">
-                                <h5 class="card-title">${product.name}</h5>
-                            </a>
-                            <p class="card-text">${product.unitprice}</p>
-                        </div>
-                    </a>
-                </div>
-                `
-                $('.cover-card').append(card)
-            }
-            const setId = (id) => {
-                localStorage.setItem('id', id);
-            }
-            productData.forEach(el => {
-                display(el)
-            })
             $('#btn-search').click(() => {
                 const productCode = $('#search-text').val()
                 if (productCode.trim() === '' || productCode == '') {

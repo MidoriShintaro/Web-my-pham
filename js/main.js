@@ -220,16 +220,12 @@ Validator.isConfirmed = function (selector, getConfirmValue, message) {
   };
 };
 
-$(document).ready(() => {
-  const productData = JSON.parse(localStorage.getItem('product'))
-  console.log(productData)
-  $("#btn-search").click(() => {
-    const name = $("#search-text").val();
-    if (name.trim() === "") {
-      $(".announcement").html("");
-      productData.forEach((el) => {
-        display(el);
-      });
-    }
-  });
-});
+// cart list
+const empty = document.querySelector(".cart-img");
+const listcart = document.querySelector(".list-product");
+const itemCart = document.querySelector(".list-product-item");
+const removeProduct = () => {
+  $(".list-product-item").remove();
+  empty.classList.add("show");
+  listcart.classList.remove("show");
+};

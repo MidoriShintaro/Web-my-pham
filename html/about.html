@@ -6,9 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/productDetail.css">
+    <link rel="stylesheet" href="../css/about.css">
     <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
-    <title>Document</title>
+    <title>AboutMe</title>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -48,7 +53,19 @@
                                 </div>
                             </div>
                             <div class="shopping">
-                                <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                <div class="shopping-cart">
+                                    <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                </div>
+                                <div class="cart">
+                                    <div class="cart-img show">
+                                        <img src="../img/empty-cart.webp" alt="" class="empty">
+                                    </div>
+                                    <div class="list-product">
+                                        <h1>Sản phẩm đã thêm</h1>
+                                        <ul class="list-cart">
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,14 +81,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="index.html">Trang chủ <span
+                            <a class="nav-link p-0 scroll-bar" href="index.html">Trang Chủ <span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="about.html">Thành Viên</a>
+                            <a class="nav-link p-0 scroll-bar text-dark font-weight-bold" href="about.html">Thành
+                                Viên</a>
                         </li>
                         <li class="nav-item dropdown bridge collapse-item">
-                            <a class="nav-link p-0 scroll-bar text-dark" href="allproducts.html" id="navbarDropdown">
+                            <a class="nav-link p-0 scroll-bar" href="allproducts.html" id="navbarDropdown">
                                 Sản Phẩm
                                 <i class=" fa-solid fa-caret-down"></i>
                             </a>
@@ -154,140 +172,112 @@
                             <a class="nav-link p-0 scroll-bar" href="news.html">Tin tức</a>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="index.html">Liên hệ</a>
+                            <a class="nav-link p-0 scroll-bar" href="#lienhe">Liên hệ</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-    <div class="content">
-        <div class="row details container-fluid p-0 m-0">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 row">
-                <div class="col-md-6">
-                    <div class="productdetail-img">
-                        <img src="../img/chongnang2.jpg" alt="" id="img-product">
+    <div class="container-fluid">
+        <div class="row col-md-1"></div>
+        <div class="row col-md-10">
+            <div class="col-md-9">
+                <div class="content">
+                    <h2>WESKIN – chuyên trang chia sẻ về mỹ phẩm sức khỏe và làm đẹp</h2>
+                    <div class="info">
+                        <h4>VỀ CÂU CHUYỆN CỦA WESKIN</h4>
+                        <h5>Tầm nhìn và sứ mệnh:</h5>
+                        <p><b>Nubeauty hay (Nu beauty)</b> là một tổ chức hoạt động với mong muốn chia sẻ lợi ích đến
+                            cho cộng đồng về làm đẹp. Giúp khách hàng có thể tìm mua được những sản phẩm mỹ phẩm chính
+                            hãng tốt nhất với giá hợp lý nhất.</p>
+                        <p><b><i>Sứ mệnh của chúng tôi</i></b> là trở thành một lực lượng có sức ảnh hưởng tốt nhất với
+                            cộng đồng. Giúp cho những người phụ nữ sau độ tuổi 30 trở nên trẻ đẹp hơn thông qua những bí
+                            quyết làm đẹp được nghiên cứu và tích lũy sau khi làm việc tại các Spa nổi tiếng như: HT
+                            SPA, thẩm mỹ viện Aura…</p>
+                        <div class="logo"><img src="../img/logo-weskin.svg" alt=""></div>
+                        <h5>Giá trị cốt lõi:</h5>
+                        <p>Đạo đức, chân thật, sáng tạo, lạc quan, từ bi và trở thành một lực lượng tốt.</p>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="productdetail-info">
-                        <h1 class="productdetail-title"></h1>
-                        <p>Mã Sản Phẩm: <span class="productCode"></span></p>
-                        <p>Thương Hiệu: <span class="trademark"></span> | Tình Trạng: <span class="status"></span></p>
-                        <span class="money"></span>
-                        <p class="information"></p>
-                        <div class="quantity">
-                            <span>Số Lượng: </span>
-                            <div class="icon-quantity">
-                                <span class="decrease">-</span>
-                                <span class="quantityNumber">
-                                    <input type="text" id="number" value="1">
-                                </span>
-                                <span class="increase">+</span>
+                    <div class="info">
+                        <h4>NHẬN DIỆN THƯƠNG HIỆU</h4>
+                        <p>Sự khác biệt của chúng tôi được <b>minh chứng qua cách chúng tôi hỗ trợ khách hàng</b>. Chúng
+                            tôi mong muốn chia sẻ thông điệp và nâng cao giá trị cho cộng đồng. Làm sao có thể mua được
+                            sản phẩm tốt, làm sao có thể mua được sản phẩm có giấy tờ chứng từ rõ ràng.</p>
+                    </div>
+                    <div class="info">
+                        <h4>VỀ CÂU CHUYỆN CỦA WESKIN</h4>
+                        <p>Triết lý kinh doanh của chúng tôi có thể giúp các khách hàng của chúng tôi kết hợp việc chăm
+                            sóc gia đình, sức khỏe và sắc đẹp cho bản thân.</p>
+                        <p>Các yếu tố này cùng ước mơ và hoài bão cháy bỏng đã giúp các đối tác của chúng tôi thành công
+                            và có cuộc sống hạnh phúc.</p>
+                        <p><B>WESKIN</B> còn là chiếc cầu nối giúp mọi người gặp gỡ những người cùng mục tiêu, giúp mọi
+                            người có cuộc sống tốt đẹp hơn thông qua việc tài trợ cho các tổ chức xã hội tại Việt Nam.
+                        </p>
+                    </div>
+                    <h4>Thanh Viên Tham Gia</h4>
+                    <div class="member">
+                        <div class="cards">
+                            <div class="card__img">
+                                <img src="./Natsu.png" alt="">
                             </div>
+                            <h2>Trần Hoàng Hà</h2>
+                            <p class="description">Fullstack Developer</p>
+                            <div class="social">
+                                <a href=""><i class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-tiktok"></i></a>
+                                <a href=""><i class="fab fa-github"></i></a>
+                            </div>
+                            <button>Contact Me</button>
                         </div>
-                        <p class="add-productdetail">Thêm Vào Giỏ Hàng</p>
+                        <div class="cards">
+                            <div class="card__img">
+                                <img src="../img/vinh.jpg" alt="">
+                            </div>
+                            <h2>Sting</h2>
+                            <p class="description">Fontend Developer</p>
+                            <div class="social">
+                                <a href="https://www.facebook.com/foodboizverygood"><i
+                                        class="fab fa-facebook-f"></i></a>
+                                <a href=""><i class="fab fa-youtube"></i></a>
+                                <a href=""><i class="fab fa-tiktok"></i></a>
+                                <a href="https://github.com/thevinh2002"><i class="fab fa-github"></i></a>
+                            </div>
+                            <button>Contact Me</button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-1"></div>
-        </div>
-        <div class="container-fluid row onsale">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 products-onsale">
-                <h1 class="header-title">
-                    <a>Sản Phẩm Liên Quan</a>
-                </h1>
-                <div class="row justify-content-between">
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/kemlot.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Kem lót Burberry Fresh Glow</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
+            <div class="col-md-3">
+                <h4>Danh mục tin tức</h4>
+                <div class="navbar navbar-nav text-left menu-news">
+                    <ul>
+                        <li class="nav-item"><a href="" class="nav-link">trang chủ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">thành viên</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                sản phẩm
                             </a>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/small1.png" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Dung dịch giúp loại bỏ sơn móng</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/sonthoi.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Son Thỏi Apieu True Fitting Lipstick</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/mascara.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Mascara Benefit They're Real</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
+                                <a class="dropdown-item" href="#">dưỡng da</a>
+                                <a class="dropdown-item" href="#">làm sạch </a>
+                                <a class="dropdown-item" href="#">trang điểm nền</a>
+                                <a class="dropdown-item" href="#">Trang điểm mắt môi</a>
+                                <a class="dropdown-item" href="#">Chăm sóc cơ thể</a>
+                                <a class="dropdown-item" href="#">Sức khỏe - làm đẹp</a>
+                                <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link">tin tức</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">liên hệ</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-1"></div>
         </div>
+        <div class="row col-md-1"></div>
     </div>
     <div class="footer">
         <div class="row container-fluid footer-contact">
@@ -357,67 +347,6 @@
             <p>&copy; Copyright 2022 |</p><a href="">Powered By Ha & Vinh</a>
         </div>
     </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script>
-        const productList = JSON.parse(localStorage.getItem('product'))
-        const id = JSON.parse(localStorage.getItem('id'))
-        const findId = productList.find(el => el.id === id)
-        let count = 1;
-        let temp = 0
-        const decrease = document.querySelector('.decrease')
-        const quantity = document.getElementById('number');
-        const increase = document.querySelector('.increase')
-        const addproductdetail = document.querySelector('.add-productdetail')
-        decrease.addEventListener('click', () => {
-            if (count > 0) {
-                quantity.setAttribute('value', `${count -= 1}`)
-            }
-            temp = count;
-            return temp;
-        })
-        increase.addEventListener('click', () => {
-            quantity.setAttribute('value', `${count += 1}`)
-            temp = count;
-            return temp;
-        })
-        const addProduct = (product) => {
-            const list = `
-            <li class="list-product-item">
-                <div class="product-list-img">
-                    <img src="${product.img}" alt="">
-                </div>
-                <div class="list-product-description">
-                    <h5 class="product-list-name">${product.name}</h5>
-                    <div class="cost">
-                        <span class="list-cost">${product.unitprice}</span>
-                        <span class="list-quantity">da co: ${count}</span>
-                        <span class="delete-product" onclick="removeProduct()">Xoá</span>
-                    </div>
-                </div>                                                
-            </li>
-            `
-            $('.list-cart').append(list)
-        }
-        const empty = document.querySelector('.cart-img')
-        const listcart = document.querySelector('.list-product')
-        const itemCart = document.querySelector('.list-product-item')
-        addproductdetail.addEventListener('click', () => {
-            empty.classList.remove('show')
-            listcart.classList.add('show')
-            addProduct(findId)
-        })
-        $(document).ready(() => {
-            $('.productdetail-title').html(findId.name)
-            $('.trademark').html(findId.trademark)
-            $('.status').html(findId.status)
-            $('.money').html(findId.unitprice)
-            $('.information').html(findId.information)
-            $('.productCode').html(findId.productCode)
-            $('#img-product').attr('src', findId.img)
-        })
-    </script>
 </body>
 
 </html>

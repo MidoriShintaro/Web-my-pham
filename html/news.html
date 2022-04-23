@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/news.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <title>Document</title>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div id="header">
+            <div class="row head">
+                <div class="col-md-3">
+                    <nav class="nav nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link p-0 img-fluid" href="#">
+                                <img src="../img/logo-weskin.svg" alt="" width="160px">
+                            </a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="col-md-6 row ">
+                    <div class="form-group form-inline w-100 justify-content-center">
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control dl-block w-100" placeholder="Search product...">
+                            <button class="btn btn-dark">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 align-items-center row justify-content-end">
+                    <div class="row" style="margin-right: 38px;">
+                        <div class="col login d-flex align-items-center">
+                            <div class="account">
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-clipboard-user icon-user" id="dropdownMenuButton"
+                                        aria-haspopup="true" aria-expanded="false"></i>
+
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="login.html">Đăng Nhập</a>
+                                        <a class="dropdown-item" href="registration.html">Đăng Kí</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping">
+                                <div class="shopping-cart">
+                                    <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                </div>
+                                <div class="cart">
+                                    <div class="cart-img show">
+                                        <img src="../img/empty-cart.webp" alt="" class="empty">
+                                    </div>
+                                    <div class="list-product">
+                                        <h1>San pham da them</h1>
+                                        <ul class="list-cart">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-sm-1"></div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="index.html">Trang chủ <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="about.html">Thành Viên</a>
+                        </li>
+                        <li class="nav-item dropdown bridge collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="allproducts.html" id="navbarDropdown">
+                                Sản Phẩm
+                                <i class=" fa-solid fa-caret-down"></i>
+                            </a>
+                            <div class="subnav row">
+                                <div class="subnav-list">
+                                    <h5>Dưỡng da</h5>
+                                    <ul>
+                                        <li><a href="">Mặt nạ</a></li>
+                                        <li><a href="">Kem dưỡng</a></li>
+                                        <li><a href="">Kem chống nắng</a></li>
+                                        <li><a href="">Xịt khoáng</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Làm sạch</h5>
+                                    <ul>
+                                        <li><a href="">Sữa rửa mặt</a></li>
+                                        <li><a href="">Kem tẩy trang</a></li>
+                                        <li><a href="">Dầu tẩy trang</a></li>
+                                        <li><a href="">Nước tẩy trang</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Trang điểm nền</h5>
+                                    <ul>
+                                        <li><a href="">Kem lót</a></li>
+                                        <li><a href="">Kem tạo hiệu ứng</a></li>
+                                        <li><a href="">Kem che khuyết điểm</a></li>
+                                        <li><a href="">Phần phủ bột</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Trang điểm mắt môi</h5>
+                                    <ul>
+                                        <li><a href="">Son thỏi</a></li>
+                                        <li><a href="">Son dưỡng</a></li>
+                                        <li><a href="">Màu mắt</a></li>
+                                        <li><a href="">Viền mắt</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Chăm sóc cơ thể</h5>
+                                    <ul>
+                                        <li><a href="">Sữa tắm</a></li>
+                                        <li><a href="">Sữa dưỡng thể</a></li>
+                                        <li><a href="">Nước hoa</a></li>
+                                        <li><a href="">Dầu gội, dầu xả</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Dược mỹ phẩm</h5>
+                                    <ul>
+                                        <li><a href="">Dưỡng ẩm da</a></li>
+                                        <li><a href="">Dưỡng trắng da</a></li>
+                                        <li><a href="">Chống lão hóa da</a></li>
+                                        <li><a href="">Tẩy tế bào chết</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Sức khỏe - làm đẹp</h5>
+                                    <ul>
+                                        <li><a href="">Tinh dầu</a></li>
+                                        <li><a href="">Nước tẩy trang</a></li>
+                                        <li><a href="">Thực phẩm làm đepk</a></li>
+                                        <li><a href="">Nước hoa</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Thực phẩm chức năng</h5>
+                                    <ul>
+                                        <li><a href="">Vitamin & Khoáng chất</a></li>
+                                        <li><a href="">Chống lão hóa da</a></li>
+                                        <li><a href="">Sữa dưỡng thể</a></li>
+                                        <li><a href="">Dầu tẩy trang</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar text-dark font-weight-bold" href="news.html">Tin tức</a>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="#lienhe">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container-fluid row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 row news-content">
+            <div class="col-md-9">
+                <div class="row">
+                    <h4>Tin Tức</h4>
+                    <div class="cover-card announcement"></div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <h4>Danh mục tin tức</h4>
+                <div class="navbar navbar-nav text-left menu-news">
+                    <ul>
+                        <li class="nav-item"><a href="" class="nav-link">trang chủ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">thành viên</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                sản phẩm
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">dưỡng da</a>
+                                <a class="dropdown-item" href="#">làm sạch </a>
+                                <a class="dropdown-item" href="#">trang điểm nền</a>
+                                <a class="dropdown-item" href="#">Trang điểm mắt môi</a>
+                                <a class="dropdown-item" href="#">Chăm sóc cơ thể</a>
+                                <a class="dropdown-item" href="#">Sức khỏe - làm đẹp</a>
+                                <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link">tin tức</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="footer">
+            <div class="row container-fluid footer-contact">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 row justify-content-around">
+                    <div class="contact-info">
+                        <a href="" class="logo-link">
+                            <img src="../img/logo-weskin.svg" alt="" width="150px">
+                        </a>
+                        <div class="contact-info-title">
+                            <p>Shop mỹ phẩm We Skin</p>
+                            <p>Làm đẹp trở nên dễ dàng hơn</p>
+                        </div>
+                        <div class="contact-address">
+                            <p>Địa chỉ: 94 Trần Vĩ, Xã An Khánh, Huyện Hoài Đức, Hà Nội, Vietnam</p>
+                            <p>Hotline: 0986475123</p>
+                            <p>Email: weskin@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-customer row align-items-center">
+                        <div class="customer">
+                            <h3>Hỗ trợ khách hàng</h3>
+                            <div class="support">
+                                <ul>
+                                    <li><a href="">Trang chủ</a></li>
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Sản phẩm</a></li>
+                                    <li><a href="">Khuyến mãi</a></li>
+                                    <li><a href="">Tin tức</a></li>
+                                    <li><a href="">Liên Hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="customer">
+                            <h3>Chính sách</h3>
+                            <div class="support">
+                                <ul>
+                                    <li><a href="">Trang chủ</a></li>
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Sản phẩm</a></li>
+                                    <li><a href="">Khuyến mãi</a></li>
+                                    <li><a href="">Tin tức</a></li>
+                                    <li><a href="">Liên Hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-connect">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <div class="connect-icon">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-google"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+
+                        <img src="../img/qrcode.jpg" alt="">
+                        <Figcaption>
+                            <H2 style="padding-right: 36px;">DONATE ME</H2>
+                        </Figcaption>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="footer-describe">
+                <p>&copy; Copyright 2022 |</p><a href="">Powered By Ha & Vinh</a>
+            </div>
+    </div>
+</body>
+<script>
+    const listnews = [
+        {
+            id: 1,
+            name: 'Mách cho bạn bí quyết trị nám tại nhà hiệu quả nhất',
+            img: '../img/news2.png',
+            author: 'Danh Đặng Hữu',
+            description: 'Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ ăn uống ngh...',
+            content: `Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đâ....Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đâ...Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đây còn chinh phục các cô nàng bởi chỉ số chống nắng vượt trội.
+            Cushion là một sản phẩm rất đa năng, thực hiện được cả chức năng của: kem lót, kem nền, che khuyết điểm và cả kem chống nắng. Chỉ với một hộp Cushion nhỏ đã giúp bạn tạo được lớp trang điểm hoàn hảo nếu như được tích hợp luôn cả khả năng chống nắng cao thì đúng là quá tuyệt vời. Cùng tham khảo ngay 3 loại cushion đang đứng top được lựa chọn nhiều nhất nhé!
+            1. Mamonde Brightening Cover Powder Cushion SPF50+/PA+++
+            Loại cushion mới này của nhà Mamonde này được bổ sung lớp bột phấn (powder), thay thế cả phấn phủ và vì thế khiến lớp nền bền màu và mịn màng hơn trong thời gian dài. Chất phấn của Mamonde Brightening Cover Powder Cushion tuy chất kem hơi lỏng nhưng vẫn rất dễ apply lên da và cho lớp nền rất tự nhiên. Bạn nào thích kiểu trang điểm mỏng nhẹ và mịn mượt như các cô gái Hàn Quốc thì đây là sản phẩm vô cùng phù hợp. Chỉ số chống nắng của em này khá cao, SPF50+/PA+++ và có độ che phủ trung bình. Nếu muốn che các vết mụn lớn thì phải dùng thêm che khuyết điểm nữa nha.
+            Với các bạn mới dùng cushion, đang phân vân không biết lựa chọn như thế nào phù hợp thì có thể tham khảo em Mamonde này nhé!
+            2. The Face Shop Miracle Finish Waterproof Cushion SPF50/PA+++
+            Đã là cushion mùa hè thì không thể không nhắc đến các sản phẩm chống nước, thích hợp để đi nắng, đi bơi. Và em cushion Miracle Finish Waterproof Cushion SPF50/PA+++  này của The Face Shop là một lựa chọn vô cùng tuyệt vời. Nếu bạn không may sở hữu làn da bóng dầu và ngại sử dụng kem phấn vì sợ lớp makeup sẽ bị trôi mất khi đổ dầu thì đừng lo, em Miracle Finish Waterproof Cushion SPF50/PA+++   có thể nằm lỳ trên mặt bạn suốt 5, 6 tiếng đồng hồ mà không hề bị xuống tông. Thậm chí bạn có lấy giấy chùi thì vẫn không bị xê dịch nhiều luôn nha. Các sản phẩm nền của The Face Shop trước giờ đều được sản xuất theo công thức kiềm dầu và bền màu cao. Ở sản phẩm lần này, còn được trang bị thêm khả năng chống nắng khá cao, SPF 50/PA+++ Hơn nữa, chỉ với một lần dặm thì hầu như mọi khuyết điểm trên khuôn mặt bạn đều biến mất, thay vào đó là lớp finish mịn và lì. Vì thế, hãy rinh ngay em nó về đội của mình nhé!
+            3. Phấn dưỡng da chống nắng Bella Belle Air DD Cushion SPF50+ / PA+++
+            Với công thức hiện đại và độc quyền từ Hàn Quốc, Phấn dưỡng da chống nắng Bella Belle Air DD Cushion sở hữu công nghệ che phủ 3 tầng thông minh và hệ thống tạo bọt khí giúp cho lớp trang điểm hoàn hảo từng centimet mà không bị nổi cộm, loang lỗ khi đánh lên mặt. Khả năng thẩm thấu nhanh có thể khô ngay trong vòng 30s, độ bắt sáng cao và đặc biệt kiềm dầu rất rất rất tốt, do đó em này cực kì thích hợp sử dụng cho làn da dầu mụn. Thành phần chứa chỉ số chống nắng SPF cao SPF50+ PA+++ giúp giảm thiểu tác động của ánh nắng mặt trời và tia cực tím, bảo vệ da nhiều giờ đồng hồ, ngăn ngừa sạm nám, lão hóa và hư tổn da.
+            Sự kết hợp giữa DƯỠNG DA – CHỐNG NẮNG – TRANG ĐIỂM chỉ trong một sản phẩm, tạo nên một giải pháp chăm sóc và bảo vệ da hiện đại cho những người phụ nữ bận rộn.
+            Chúc các bạn lựa chọn được sản phẩm phù hợp nhất với làn da của mình nhé!`
+        },
+        {
+            id: 2,
+            name: 'Xu hướng lông mày năm 2018 không thể không biết',
+            img: '../img/news1.png',
+            author: 'Danh Đặng Hữu',
+            description: 'Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ ăn uống ngh...',
+            content: 'Nếu bạn đang có ý định làm đẹp đôi chân mày của mình nhưng không biết mẫu nào hót nhất trong năm....'
+        },
+        {
+            id: 3,
+            name: 'Top 3 cushion chống nắng HOT nhất 2018 bạn gái sành điệu không thể bỏ qua',
+            img: '../img/news4.png',
+            author: 'Danh Đặng Hữu',
+            description: 'Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ ăn uống ngh...',
+            content: 'Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đâ...'
+        },
+        {
+            id: 4,
+            name: 'Những công dụng đặc biệt trong làm đẹp da và tóc từ nước vo gạo',
+            img: '../img/news2.png',
+            author: 'Danh Đặng Hữu',
+            description: 'Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ ăn uống ngh...',
+            content: 'Giàu vitamin và khoáng chất, nước vo gạo có đặc tính chống viêm, giúp làm sạch da mặt, dưỡng sán...'
+        },
+    ]
+    localStorage.setItem('news', JSON.stringify(listnews))
+    const newsdata = JSON.parse(localStorage.getItem('news'))
+    const display = (news) => {
+        const cards =
+            ` <a href="newsdetail.html" onclick="setId(${news.id})">
+                        <div class="card mt-5 mr-5 col-sm-5 ">
+                            <img class="card-img-top" src="
+                            ${news.img}" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">${news.name}</h5>
+                              <p class="card-text">
+                                <i class="fa-solid fa-user"></i>
+                                <span>Đăng bởi:${news.author}</span>
+                              </p>
+                            </div>
+                    </a>
+                        <div class="card-footer">
+                          <small class="text-muted">${news.description}</small>
+                        </div>
+                      </div>`
+        $('.cover-card').append(cards)
+    }
+    const setId = (id) => {
+        localStorage.setItem('id', id);
+    }
+    newsdata.forEach(
+        display
+    );
+</script>
+
+</html>

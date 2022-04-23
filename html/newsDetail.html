@@ -6,9 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/productDetail.css">
+    <link rel="stylesheet" href="../css/newsdetail.css">
     <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
     <title>Document</title>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -48,7 +52,19 @@
                                 </div>
                             </div>
                             <div class="shopping">
-                                <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                <div class="shopping-cart">
+                                    <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                </div>
+                                <div class="cart">
+                                    <div class="cart-img show">
+                                        <img src="../img/empty-cart.webp" alt="" class="empty">
+                                    </div>
+                                    <div class="list-product">
+                                        <h1>San pham da them</h1>
+                                        <ul class="list-cart">
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -64,15 +80,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="index.html">Trang chủ <span
+                            <a class="nav-link p-0 scroll-bar" href="index.html">trang chủ <span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="about.html">Thành Viên</a>
+                            <a class="nav-link p-0 scroll-bar" href="#">thành viên</a>
                         </li>
                         <li class="nav-item dropdown bridge collapse-item">
-                            <a class="nav-link p-0 scroll-bar text-dark" href="allproducts.html" id="navbarDropdown">
-                                Sản Phẩm
+                            <a class="nav-link p-0 scroll-bar" href="#" id="navbarDropdown">
+                                sản phẩm
                                 <i class=" fa-solid fa-caret-down"></i>
                             </a>
                             <div class="subnav row">
@@ -151,143 +167,60 @@
                             </div>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="news.html">Tin tức</a>
+                            <a class="nav-link p-0 scroll-bar" href="">tin tức</a>
                         </li>
                         <li class="nav-item collapse-item">
-                            <a class="nav-link p-0 scroll-bar" href="index.html">Liên hệ</a>
+                            <a class="nav-link p-0 scroll-bar" href="">liên hệ</a>
                         </li>
                     </ul>
                 </div>
             </nav>
         </div>
     </div>
-    <div class="content">
-        <div class="row details container-fluid p-0 m-0">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 row">
-                <div class="col-md-6">
-                    <div class="productdetail-img">
-                        <img src="../img/chongnang2.jpg" alt="" id="img-product">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="productdetail-info">
-                        <h1 class="productdetail-title"></h1>
-                        <p>Mã Sản Phẩm: <span class="productCode"></span></p>
-                        <p>Thương Hiệu: <span class="trademark"></span> | Tình Trạng: <span class="status"></span></p>
-                        <span class="money"></span>
-                        <p class="information"></p>
-                        <div class="quantity">
-                            <span>Số Lượng: </span>
-                            <div class="icon-quantity">
-                                <span class="decrease">-</span>
-                                <span class="quantityNumber">
-                                    <input type="text" id="number" value="1">
-                                </span>
-                                <span class="increase">+</span>
+
+    <div class="container-fluid">
+        <div class="row col-md-1"></div>
+        <div class="row col-md-10">
+            <div class="col-md-9">
+
+                <h4>Tin tức</h4>
+                <div><img class="img-news" src="../img/news1.jpg" alt="" width="100%" height="500px"></div>
+                <h3 class="name-news"></h3>
+                <p>Đăng bởi: <span class="author"></span></p>
+                <hr>
+                <p class="content">
+                </p>
+            </div>
+            <div class="col-md-3">
+                <h4>Danh mục tin tức</h4>
+                <div class="navbar navbar-nav text-left menu-news">
+                    <ul>
+                        <li class="nav-item"><a href="" class="nav-link">trang chủ</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">thành viên</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                sản phẩm
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+
+                                <a class="dropdown-item" href="#">dưỡng da</a>
+                                <a class="dropdown-item" href="#">làm sạch </a>
+                                <a class="dropdown-item" href="#">trang điểm nền</a>
+                                <a class="dropdown-item" href="#">Trang điểm mắt môi</a>
+                                <a class="dropdown-item" href="#">Chăm sóc cơ thể</a>
+                                <a class="dropdown-item" href="#">Sức khỏe - làm đẹp</a>
+                                <a class="dropdown-item" href="#">Thực phẩm chức năng</a>
+
                             </div>
-                        </div>
-                        <p class="add-productdetail">Thêm Vào Giỏ Hàng</p>
-                    </div>
+                        </li>
+                        <li class="nav-item"><a href="" class="nav-link">tin tức</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">liên hệ</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="col-md-1"></div>
         </div>
-        <div class="container-fluid row onsale">
-            <div class="col-md-1"></div>
-            <div class="col-md-10 products-onsale">
-                <h1 class="header-title">
-                    <a>Sản Phẩm Liên Quan</a>
-                </h1>
-                <div class="row justify-content-between">
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/kemlot.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Kem lót Burberry Fresh Glow</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/small1.png" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Dung dịch giúp loại bỏ sơn móng</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/sonthoi.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Son Thỏi Apieu True Fitting Lipstick</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/mascara.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Mascara Benefit They're Real</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-1"></div>
-        </div>
+        <div class="row col-md-1"></div>
     </div>
     <div class="footer">
         <div class="row container-fluid footer-contact">
@@ -357,67 +290,21 @@
             <p>&copy; Copyright 2022 |</p><a href="">Powered By Ha & Vinh</a>
         </div>
     </div>
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/popper.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script>
-        const productList = JSON.parse(localStorage.getItem('product'))
-        const id = JSON.parse(localStorage.getItem('id'))
-        const findId = productList.find(el => el.id === id)
-        let count = 1;
-        let temp = 0
-        const decrease = document.querySelector('.decrease')
-        const quantity = document.getElementById('number');
-        const increase = document.querySelector('.increase')
-        const addproductdetail = document.querySelector('.add-productdetail')
-        decrease.addEventListener('click', () => {
-            if (count > 0) {
-                quantity.setAttribute('value', `${count -= 1}`)
-            }
-            temp = count;
-            return temp;
-        })
-        increase.addEventListener('click', () => {
-            quantity.setAttribute('value', `${count += 1}`)
-            temp = count;
-            return temp;
-        })
-        const addProduct = (product) => {
-            const list = `
-            <li class="list-product-item">
-                <div class="product-list-img">
-                    <img src="${product.img}" alt="">
-                </div>
-                <div class="list-product-description">
-                    <h5 class="product-list-name">${product.name}</h5>
-                    <div class="cost">
-                        <span class="list-cost">${product.unitprice}</span>
-                        <span class="list-quantity">da co: ${count}</span>
-                        <span class="delete-product" onclick="removeProduct()">Xoá</span>
-                    </div>
-                </div>                                                
-            </li>
-            `
-            $('.list-cart').append(list)
-        }
-        const empty = document.querySelector('.cart-img')
-        const listcart = document.querySelector('.list-product')
-        const itemCart = document.querySelector('.list-product-item')
-        addproductdetail.addEventListener('click', () => {
-            empty.classList.remove('show')
-            listcart.classList.add('show')
-            addProduct(findId)
-        })
-        $(document).ready(() => {
-            $('.productdetail-title').html(findId.name)
-            $('.trademark').html(findId.trademark)
-            $('.status').html(findId.status)
-            $('.money').html(findId.unitprice)
-            $('.information').html(findId.information)
-            $('.productCode').html(findId.productCode)
-            $('#img-product').attr('src', findId.img)
-        })
-    </script>
+    </div>
+
 </body>
+<script>
+    const newslist = JSON.parse(localStorage.getItem('news'))
+    console.log(newslist)
+    const id = JSON.parse(localStorage.getItem('id'))
+    const findid = newslist.find(el => el.id === id)
+    $(document).ready(() => {
+        $('.img-news').attr('src', findid.img)
+        $('.name-news').html(findid.name)
+        $('.author').html(findid.author)
+        $('.content').html(findid.content)
+    })
+    console.log(findid)
+</script>
 
 </html>
