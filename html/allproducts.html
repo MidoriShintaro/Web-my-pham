@@ -33,8 +33,9 @@
                     <div class="form-group form-inline w-100 justify-content-center">
                         <div class="search">
                             <i class="fa fa-search"></i>
-                            <input type="text" class="form-control dl-block w-100" placeholder="Search product...">
-                            <button class="btn btn-dark">Search</button>
+                            <input type="text" id="search-text" onkeyup="searchPro()" class="form-control dl-block w-100"
+                                placeholder="Search product...">
+                            <button id="btn-search" class="btn btn-dark">Search</button>
                         </div>
                     </div>
                 </div>
@@ -550,25 +551,39 @@
         productData.forEach(el => {
             display(el)
         })
-        $(document).ready(() => {
-            $('#btn-search').click(() => {
-                const productCode = $('#search-text').val()
-                if (productCode.trim() === '' || productCode == '') {
-                    $('.announcement').html('')
-                    productData.forEach(display)
-                    return true
+        const pro = document.querySelectorAll('.card')
+        const searchPro = () => {
+            const input = document.getElementById('search-text')
+            const fil = input.value.toUpperCase()
+            var a, val
+            for (let i = 0; i < productData.length; i++) {
+                a = productData[i].name
+                if(a.toUpperCase().indexOf(fil) > -1) {
+                    pro[i].style.display = ''
+                } else {
+                    pro[i].style.display = 'none'
                 }
-                const findproductCode = productData.find(el => el.productCode == productCode)
-                console.log(findproductCode)
-                if (findproductCode == undefined) {
-                    $('.announcement').html('<i>Khong tim thay san pham</i>')
-                    return false
-                }
-                $('.announcement').html('')
-                display(findproductCode)
-                return true;
-            })
-        })
+            }
+        }
+        // $(document).ready(() => {
+        //     $('#btn-search').click(() => {
+        //         const productCode = $('#search-text').val()
+        //         if (productCode.trim() === '' || productCode == '') {
+        //             $('.announcement').html('')
+        //             productData.forEach(display)
+        //             return true
+        //         }
+        //         const findproductCode = productData.find(el => el.productCode == productCode)
+        //         console.log(findproductCode)
+        //         if (findproductCode == undefined) {
+        //             $('.announcement').html('<i>Không tìm thấy sản phẩm</i>')
+        //             return false
+        //         }
+        //         $('.announcement').html('')
+        //         display(findproductCode)
+        //         return true;
+        //     })
+        // })
     </script>
 </body>
 
