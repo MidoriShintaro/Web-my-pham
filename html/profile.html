@@ -7,23 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/profile.css">
-    <title>Document</title>
+    <title>Hồ sơ người dùng</title>
 </head>
 
 <body>
-
     <div id="main">
         <div class="profile">
             <div class="goBack">
-                <button type="button" onclick="Logout()">Dang xuat</button>
-                <button type="button" onclick="returnHome()">Tro ve trang chu</button>
+                <button type="button" onclick="Logout()">Đăng xuất</button>
+                <button type="button" onclick="returnHome()">Trở về trang chủ</button>
             </div>
-            <h1>Ho So cua toi</h1>
+            <h1>Hồ sơ của tôi</h1>
             <hr>
             <div class="myprofile row">
                 <div class="profile-content col-md-6">
                     <div class="avaiprofile">
-                        <h3>Username:
+                        <h3>Tên người dùng:
                             <script>document.write(localStorage.getItem('name'))</script>
                         </h3>
                         <h3>Email:
@@ -31,43 +30,43 @@
                         </h3>
                     </div>
                     <div class="fullprofile">
-                        <h3>Fullname:
+                        <h3>Họ và tên:
                             <script>
                                 const fullname = localStorage.getItem('fullname')
                                 if (fullname != null) {
                                     document.write(fullname)
                                 } else {
-                                    document.write('chua co thong tin')
+                                    document.write('chưa có thông tin')
                                 }
                             </script>
                         </h3>
-                        <h3>Address:
+                        <h3>Địa chỉ:
                             <script>
                                 const address = localStorage.getItem('address')
                                 if (address != null) {
                                     document.write(address)
                                 } else {
-                                    document.write('chua co thong tin')
+                                    document.write('chưa có thông tin')
                                 }
                             </script>
                         </h3>
-                        <h3>So Dien Thoai:
+                        <h3>Số điện thoại:
                             <script>
                                 const phoneNumber = localStorage.getItem('phoneNumber')
                                 if (phoneNumber != null) {
                                     document.write(phoneNumber)
                                 } else {
-                                    document.write('chua co thong tin')
+                                    document.write('chưa có thông tin')
                                 }
                             </script>
                         </h3>
-                        <h3>Thanh Pho:
+                        <h3>Thành Phố:
                             <script>
                                 const city = localStorage.getItem('city')
                                 if (city != null) {
                                     document.write(city)
                                 } else {
-                                    document.write('chua co thong tin')
+                                    document.write('chưa có thông tin')
                                 }
                             </script>
                         </h3>
@@ -75,7 +74,7 @@
                 </div>
                 <div class="profile-avatar col-md-6">
                     <section>
-                        <h3>Anh dai dien</h3>
+                        <h3>Ảnh đại diện</h3>
                         <!-- <div class="card testimonial-card">
                             <div class="card-up" style="background-color: #6d5b98;"></div>
                             <div class="avatar mx-auto bg-white">
@@ -100,7 +99,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Hoan Thanh Profile cua ban</h5>
+                            <h5 class="modal-title">Hoàn thành hồ sơ của bạn</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span id="close-icon" aria-hidden="true">&times;</span>
                             </button>
@@ -108,7 +107,7 @@
                         <div class="modal-body">
                             <form id="myForm">
                                 <div class="form-group row">
-                                    <label for="fullname" class="col-sm-3 col-form-label">Ho ten</label>
+                                    <label for="fullname" class="col-sm-3 col-form-label">Họ tên</label>
                                     <div class="col-sm-9">
                                         <input type="text" placeholder="VD: Nguyen Van A" class="form-control"
                                             id="fullname">
@@ -116,7 +115,7 @@
                                     <span class="errorName"></span>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="address" class="col-sm-3 col-form-label">Dia chi</label>
+                                    <label for="address" class="col-sm-3 col-form-label">Địa chỉ</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="address"
                                             placeholder="Nguyen Thi Minh Khai, Q1, TP.HCM">
@@ -124,7 +123,7 @@
                                     <span class="errorAddress"></span>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="phoneNumber" class="col-sm-3 col-form-label">So dien thoai</label>
+                                    <label for="phoneNumber" class="col-sm-3 col-form-label">Số điện thoại</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="phoneNumber"
                                             placeholder="84+ 0123456789">
@@ -132,7 +131,7 @@
                                     <span class="errorphoneNum"></span>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="city" class="col-sm-3 col-form-label">Tinh/Thanh pho</label>
+                                    <label for="city" class="col-sm-3 col-form-label">Tỉnh/Thành phố</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control" id="city"
                                             placeholder="Ho Chi Minh City">
@@ -193,7 +192,7 @@
                     $('#myForm')[0].reset()
                 }
                 else {
-                    alert('ple')
+                    alert('Vui lòng nhập đầy đủ thông tin')
                     return false
                 }
             })
@@ -201,11 +200,11 @@
                 const fullname = $('#fullname').val()
                 const regName = /[A-Za-z]/gi
                 if (fullname.trim() === "") {
-                    $('.errorName').html('The field is required')
+                    $('.errorName').html('Trường này là bắt buộc')
                     return false
                 }
                 if (!regName.test(fullname)) {
-                    $('.errorName').html('Ho ten khong duoc co so va ky tu dac biet')
+                    $('.errorName').html('Họ tên không được có số')
                     return false
                 }
                 $('.errorName').html('')
@@ -215,7 +214,7 @@
             const checkAddress = () => {
                 const address = $('#address').val()
                 if (address.trim() === "") {
-                    $('.errorAddress').html('The field is required')
+                    $('.errorAddress').html('Trường này là bắt buộc')
                     return false
                 }
                 $('.errorAddress').html('')
@@ -226,11 +225,11 @@
                 const phoneNumber = $('#phoneNumber').val()
                 const regNum = /^[0-9]{9,10}$/
                 if (phoneNumber.trim() === "") {
-                    $('.errorphoneNum').html('The field is required')
+                    $('.errorphoneNum').html('Trường này là bắt buộc')
                     return false
                 }
                 if (!regNum.test(phoneNumber)) {
-                    $('.errorphoneNum').html('Sdt khong chua ky tu va chi duoc 9 - 10 so')
+                    $('.errorphoneNum').html('SDT chỉ được 9 - 10 số')
                     return false
                 }
                 $('.errorphoneNum').html('')
@@ -241,11 +240,11 @@
                 const city = $('#city').val()
                 const regCity = /^(\w+[^\d])\s(\w+[^\d])\s(\w+[^\d])$|^(\w+^\d)\s(\w+^\d)$/
                 if (city.trim() === "") {
-                    $('.errorCity').html('The field is required')
+                    $('.errorCity').html('Trường này là bắt buộc')
                     return false
                 }
                 if (!regCity.test(city)) {
-                    $('.errorCity').html('Ten Thanh Pho phai co khoang trang')
+                    $('.errorCity').html('Tên thành phố phải có khoảng trắng')
                     return false
                 }
                 $('.errorCity').html('')
@@ -259,7 +258,7 @@
     <script>
         let name = localStorage.getItem('name') ? localStorage.getItem('name') : ''
         if (name == '') {
-            alert('Ban can dang nhap truoc');
+            alert('Bạn cần đăng nhập trước');
             window.location.href = "login.html";
         }
         const profile = document.querySelector('.fullprofile')

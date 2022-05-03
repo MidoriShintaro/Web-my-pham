@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/productDetail.css">
     <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
-    <title>Document</title>
+    <title>Chi tiết sản phẩm</title>
 </head>
 
 <body>
@@ -48,7 +48,19 @@
                                 </div>
                             </div>
                             <div class="shopping">
-                                <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                <div class="shopping-cart">
+                                    <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                </div>
+                                <div class="cart">
+                                    <div class="cart-img show">
+                                        <img src="../img/empty-cart.webp" alt="" class="empty">
+                                    </div>
+                                    <div class="list-product">
+                                        <h1>Sản phẩm đã thêm</h1>
+                                        <ul class="list-cart">
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -199,91 +211,7 @@
                 <h1 class="header-title">
                     <a>Sản Phẩm Liên Quan</a>
                 </h1>
-                <div class="row justify-content-between">
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/kemlot.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Kem lót Burberry Fresh Glow</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/small1.png" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Dung dịch giúp loại bỏ sơn móng</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/sonthoi.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Son Thỏi Apieu True Fitting Lipstick</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="product">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                            <line class="top" x1="0" y1="0" x2="900" y2="0" />
-                            <line class="left" x1="0" y1="460" x2="0" y2="-920" />
-                            <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
-                            <line class="right" x1="224" y1="0" x2="224" y2="1380" />
-                        </svg>
-                        <div class="product-detail">
-                            <a href="allproducts.html" class="detail-link">
-                                <div class="product-img">
-                                    <img src="../img/products/mascara.jpg" alt="">
-                                </div>
-                                <div class="product-info">
-                                    <p>Mascara Benefit They're Real</p>
-                                    <span>500.000d</span>
-                                </div>
-                                <a href="" class="add-product">Thêm vào giỏ hàng</a>
-                            </a>
-                        </div>
-
-                    </div>
+                <div class="row justify-content-between relate">
                 </div>
             </div>
             <div class="col-md-1"></div>
@@ -302,8 +230,8 @@
                         <p>Làm đẹp trở nên dễ dàng hơn</p>
                     </div>
                     <div class="contact-address">
-                        <p>Địa chỉ: 94 Trần Vĩ, Xã An Khánh, Huyện Hoài Đức, Hà Nội, Vietnam</p>
-                        <p>Hotline: 0986475123</p>
+                        <p>Địa chỉ: Gò Vấp, TP.Hồ Chí Minh, Vietnam</p>
+                        <p>Hotline: 0101010101</p>
                         <p>Email: weskin@gmail.com</p>
                     </div>
                 </div>
@@ -361,8 +289,82 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script>
+        const productRelate = [
+            {
+                id: 1,
+                name: 'Kem lót Burberry Fresh Glow',
+                trademark: 'Missha',
+                status: 'Còn Hàng',
+                unitprice: '200.000đ',
+                information: 'Thông tin sản phẩm đang được cập nhật',
+                img: '../img/products/kemlot.jpg'
+            },
+            {
+                id: 2,
+                name: 'Dung dịch giúp loại bỏ sơn móng',
+                trademark: 'Missha',
+                status: 'Còn Hàng',
+                unitprice: '200.000đ',
+                information: 'Thông tin sản phẩm đang được cập nhật',
+                img: '../img/products/small1.png'
+            },
+            {
+                id: 3,
+                name: 'Sữa tắm Victoria’s Secret quyến rũ',
+                trademark: 'Missha',
+                status: 'Còn Hàng',
+                unitprice: '840,000₫',
+                information: 'Thông tin sản phẩm đang được cập nhật',
+                img: '../img/products/suatam.png'
+            },
+            {
+                id: 4,
+                name: "Mascara Benefit They're Real",
+                trademark: 'Missha',
+                status: 'Còn Hàng',
+                unitprice: '480,000₫',
+                information: 'Thông tin sản phẩm đang được cập nhật',
+                img: '../img/products/mascara.jpg'
+            }
+        ]
+        localStorage.setItem('productRelate', JSON.stringify(productRelate))
+        const dataRelate = JSON.parse(localStorage.getItem('productRelate'))
+        const display = (product) => {
+            const data =
+                `
+            <div class="product">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                    <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                    <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                    <line class="bottom" x1="300" y1="449" x2="-600" y2="449" />
+                    <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                </svg>
+                <div class="product-detail">
+                    <a href="allproducts.html"  class="detail-link">
+                        <div class="product-img">
+                            <img src="${product.img}" alt="">
+                        </div>
+                        <div class="product-info">
+                            <p>${product.name}</p>
+                            <span>${product.unitprice}</span>
+                        </div>
+                        <a style="cursor: pointer; color: #fff;" onclick="setIdRelate(${product.id}); clickAdd();" class="add-product">Thêm vào giỏ hàng</a>
+                    </a>
+                </div>
+            </div>
+            `
+            $('.relate').append(data)
+        }
+        const setIdRelate = (id) => {
+            localStorage.setItem('idRelate', id)
+        }
+        dataRelate.forEach(el => {
+            display(el)
+        })
         const productList = JSON.parse(localStorage.getItem('product'))
         const id = JSON.parse(localStorage.getItem('id'))
+        const idRelate = JSON.parse(localStorage.getItem('idRelate'))
+        const findIdRelate = dataRelate.find(el => el.id === idRelate)
         const findId = productList.find(el => el.id === id)
         let count = 1;
         let temp = 0
@@ -392,8 +394,8 @@
                     <h5 class="product-list-name">${product.name}</h5>
                     <div class="cost">
                         <span class="list-cost">${product.unitprice}</span>
-                        <span class="list-quantity">da co: ${count}</span>
-                        <span class="delete-product" onclick="removeProduct()">Xoá</span>
+                        <span class="list-quantity">Đã có: ${count}</span>
+                        <span class="delete-product" onclick="removeProduct()" style="cursor: pointer;">Xoá</span>
                     </div>
                 </div>                                                
             </li>
@@ -403,11 +405,22 @@
         const empty = document.querySelector('.cart-img')
         const listcart = document.querySelector('.list-product')
         const itemCart = document.querySelector('.list-product-item')
+        const addAnother = document.querySelector('.add-product')
+        const clickAdd = () => {
+            empty.classList.remove('show')
+            listcart.classList.add('show')
+            addProduct(findIdRelate)
+        }
         addproductdetail.addEventListener('click', () => {
             empty.classList.remove('show')
             listcart.classList.add('show')
             addProduct(findId)
         })
+        const removeProduct = () => {
+            $(".list-product-item").remove();
+            empty.classList.add("show");
+            listcart.classList.remove("show");
+        };
         $(document).ready(() => {
             $('.productdetail-title').html(findId.name)
             $('.trademark').html(findId.trademark)

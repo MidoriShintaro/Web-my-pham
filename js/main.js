@@ -16,11 +16,11 @@ const saveData = () => {
   const checkEmail = user.find((el) => el.email === email);
   const checkUsername = user.find((el) => el.name === name);
   if (name == "" || email == "" || psw == "" || confirm == "") {
-    err.innerHTML = "Vui long nhap het tat ca cac truong";
+    err.innerHTML = "Vui lòng nhập hết tất cả các trường";
     return false;
   }
   if (checkEmail || checkUsername) {
-    err.innerHTML = "Ten dang nhap hoac email da ton tai";
+    err.innerHTML = "Tên đăng nhập hoặc email đã tồn tại";
   } else {
     user.push({
       name: name,

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../font/fontawesome-free-6.1.1-web/css/all.min.css">
+    <title>Trang chủ</title>
+
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div id="header">
+            <div class="row head">
+                <div class="col-md-3">
+                    <nav class="nav nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link p-0 img-fluid" href="#">
+                                <img src="../img/logo-weskin.svg" alt="" width="160px">
+                            </a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="col-md-6 row ">
+                    <div class="form-group form-inline w-100 justify-content-center">
+                        <div class="search">
+                            <i class="fa fa-search"></i>
+                            <input type="text" class="form-control dl-block w-100" placeholder="Search product...">
+                            <button class="btn btn-dark">Search</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 align-items-center row justify-content-end">
+                    <div class="row" style="margin-right: 38px;">
+                        <div class="col login d-flex align-items-center">
+                            <div class="account">
+                                <div class="dropdown">
+                                    <i class="fa-solid fa-clipboard-user icon-user" id="dropdownMenuButton"
+                                        aria-haspopup="true" aria-expanded="false"></i>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="login.html">Đăng Nhập</a>
+                                        <a class="dropdown-item" href="registration.html">Đăng Kí</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shopping">
+                                <div class="shopping-cart">
+                                    <i class="fa-solid fa-cart-shopping icon-shopping"></i>
+                                </div>
+                                <div class="cart">
+                                    <div class="cart-img show">
+                                        <img src="../img/empty-cart.webp" alt="" class="empty">
+                                    </div>
+                                    <div class="list-product">
+                                        <h1>Sản phẩm đã thêm</h1>
+                                        <ul class="list-cart">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="col-sm-1"></div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active collapse-item">
+                            <a class="nav-link p-0 scroll-bar text-dark font-weight-bold" href="index.html">Trang Chủ
+                                <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="about.html">Thành Viên</a>
+                        </li>
+                        <li class="nav-item dropdown bridge collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="allproducts.html" id="navbarDropdown">
+                                Sản Phẩm
+                                <i class=" fa-solid fa-caret-down"></i>
+                            </a>
+                            <div class="subnav row">
+                                <div class="subnav-list">
+                                    <h5>Dưỡng da</h5>
+                                    <ul>
+                                        <li><a href="">Mặt nạ</a></li>
+                                        <li><a href="">Kem dưỡng</a></li>
+                                        <li><a href="">Kem chống nắng</a></li>
+                                        <li><a href="">Xịt khoáng</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Làm sạch</h5>
+                                    <ul>
+                                        <li><a href="">Sữa rửa mặt</a></li>
+                                        <li><a href="">Kem tẩy trang</a></li>
+                                        <li><a href="">Dầu tẩy trang</a></li>
+                                        <li><a href="">Nước tẩy trang</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Trang điểm nền</h5>
+                                    <ul>
+                                        <li><a href="">Kem lót</a></li>
+                                        <li><a href="">Kem tạo hiệu ứng</a></li>
+                                        <li><a href="">Kem che khuyết điểm</a></li>
+                                        <li><a href="">Phần phủ bột</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Trang điểm mắt môi</h5>
+                                    <ul>
+                                        <li><a href="">Son thỏi</a></li>
+                                        <li><a href="">Son dưỡng</a></li>
+                                        <li><a href="">Màu mắt</a></li>
+                                        <li><a href="">Viền mắt</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Chăm sóc cơ thể</h5>
+                                    <ul>
+                                        <li><a href="">Sữa tắm</a></li>
+                                        <li><a href="">Sữa dưỡng thể</a></li>
+                                        <li><a href="">Nước hoa</a></li>
+                                        <li><a href="">Dầu gội, dầu xả</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Dược mỹ phẩm</h5>
+                                    <ul>
+                                        <li><a href="">Dưỡng ẩm da</a></li>
+                                        <li><a href="">Dưỡng trắng da</a></li>
+                                        <li><a href="">Chống lão hóa da</a></li>
+                                        <li><a href="">Tẩy tế bào chết</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Sức khỏe - làm đẹp</h5>
+                                    <ul>
+                                        <li><a href="">Tinh dầu</a></li>
+                                        <li><a href="">Nước tẩy trang</a></li>
+                                        <li><a href="">Thực phẩm làm đepk</a></li>
+                                        <li><a href="">Nước hoa</a></li>
+                                    </ul>
+                                </div>
+                                <div class="subnav-list">
+                                    <h5>Thực phẩm chức năng</h5>
+                                    <ul>
+                                        <li><a href="">Vitamin & Khoáng chất</a></li>
+                                        <li><a href="">Chống lão hóa da</a></li>
+                                        <li><a href="">Sữa dưỡng thể</a></li>
+                                        <li><a href="">Dầu tẩy trang</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="news.html">Tin tức</a>
+                        </li>
+                        <li class="nav-item collapse-item">
+                            <a class="nav-link p-0 scroll-bar" href="#lienhe">Liên hệ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div id="slider container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../img/Head-Banner-17-scaled.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/anh-bia-cac-loai-my-pham-lam-dep-da-sang-trong_094445485.jpg"
+                            class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/1632870007_764_Anh-bia-my-pham-dep.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../img/1632870009_441_Anh-bia-my-pham-dep.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">quay lại</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">tiếp theo</span>
+                </a>
+            </div>
+        </div>
+        <div class="trademark container-fluid">
+            <div class="row align-items-center">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2 text-trademark">
+                    <h2>Thương Hiệu</h2>
+                    <p>nổi bật</p>
+                </div>
+                <div class="col-md-8 list-img-trademark">
+                    <div class="img-trademark">
+                        <img class="img-fluid" src="../img/thuonghieu1.jpg" alt="">
+                    </div>
+                    <div class="img-trademark">
+                        <img class="img-fluid" src="../img/thuonghieu2.jpg" alt="">
+                    </div>
+                    <div class="img-trademark">
+                        <img class="img-fluid" src="../img/thuonghieu6.png" alt="">
+                    </div>
+                    <div class="img-trademark">
+                        <img class="img-fluid" src="../img/thuonghieu4.png" alt="">
+                    </div>
+                    <div class="img-trademark">
+                        <img class="img-fluid" src="../img/thiet-ke-logo-my-pham-11.png" alt="">
+                    </div>
+                    <div class="img-trademark">
+                        <img class="img-fluid" src="../img/logo-thuong-hieu-my-pham-1-1.png" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container-fluid row onsale">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 products-onsale">
+                    <h1 class="header-title">
+                        <a href="">Sản Phẩm Bán Chạy</a>
+                    </h1>
+                    <div class="row justify-content-between">
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/kemlot.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Kem lót Burberry Fresh Glow</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/tinhchatduongda.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Tinh chất dưỡng da SK-II Facial</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/phanmat.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Phấn mắt Moonshadow Baked</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/nuochoa.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Nước hoa Lancôme La Vie Est</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="outstanding container-fluid row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 products-outstanding">
+                    <div class="product-outstanding row justify-content-between">
+                        <div class="product-outstanding-title outstanding-img">
+                            <h1>Sản Phẩm Nổi Bật</h1>
+                            <a href="allproducts.html" class="product-more">Xem thêm</a>
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/small1.png" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Dung dịch giúp loại bỏ sơn móng</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/small2.png" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Kem chống nắng AHA</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/small4.png" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Nước hoa Chloé Eau de Parfum</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="new container-fluid row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 products-onsale">
+                    <div class="product-outstanding row justify-content-between">
+                        <div class="product-outstanding-title new-img">
+                            <h1>Sản Phẩm Mới</h1>
+                            <a href="allproducts.html" class="product-more">Xem thêm</a>
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/sonthoi.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Son Thỏi Apieu True Fitting Lipstick</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/son3mau.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Son Ba Màu Maybelline Bitten 3.9g</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/sonmoichirstian.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Son môi Christian Louboutin Silky</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="hot container-fluid row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="product-outstanding row justify-content-between">
+                        <div class="product-outstanding-title hot-img">
+                            <h1>Sản Phẩm HOT</h1>
+                            <a href="allproducts.html" class="product-more">Xem thêm</a>
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/mascara.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Mascara Benefit They're Real</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/ddloaibosonmong.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Dung dịch giúp loại bỏ sơn móng</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="product">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+                                <line class="top" x1="0" y1="0" x2="900" y2="0" />
+                                <line class="left" x1="0" y1="460" x2="0" y2="-920" />
+                                <line class="bottom" x1="300" y1="400" x2="-600" y2="400" />
+                                <line class="right" x1="224" y1="0" x2="224" y2="1380" />
+                            </svg>
+                            <div class="product-detail">
+                                <a href="allproduct.html" class="detail-link">
+                                    <div class="product-img">
+                                        <img src="../img/products/sonvemong.jpg" alt="">
+                                    </div>
+                                    <div class="product-info">
+                                        <p>Nước sơn vẽ móng Mira AROMA art club</p>
+                                        <span>500.000d</span>
+                                    </div>
+                                    <a href="./allproducts.html" class="add-product">Thêm vào giỏ hàng</a>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <div class="news">
+            <div class="row container-fluid m-0 p-0">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 w-100">
+                    <div class="header-news">
+                        <a href="./news.html">Tin tức & Khuyến mãi</a>
+                    </div>
+                    <div class="news-info row justify-content-center">
+                        <div class="news-detail">
+                            <div class="news-img">
+                                <a href="./news.html" class="news-link">
+                                    <img src="../img/news1.png" alt="">
+                                </a>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-title">
+                                    <a href="">Mách cho bạn bí quyết trị nám tại nhà hiệu quả nhất</a>
+                                </div>
+                                <div class="news-description">
+                                    <p>Da chúng ta dễ bị thâm nám là do tiếp xúc với ánh nắng mặt trời thường xuyên, chế độ
+                                        ăn uống nghỉ ngơi chưa hợp lí... <a href="./news.html">Xem thêm</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-detail">
+                            <div class="news-img">
+                                <a href="./news.html" class="news-link">
+                                    <img src="../img/news2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-title">
+                                    <a href="">Xu hướng lông mày năm 2022 không thể không biết</a>
+                                </div>
+                                <div class="news-description">
+                                    <p>Nếu bạn đang có ý định làm đẹp đôi chân mày của mình nhưng không biết mẫu nào hót nhất trong năm....<a href="./news.html">Xem thêm</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="news-detail">
+                            <div class="news-img">
+                                <a href="./news.html" class="news-link">
+                                    <img src="../img/news4.png" alt="">
+                                </a>
+                            </div>
+                            <div class="news-content">
+                                <div class="news-title">
+                                    <a href="">Những công dụng đặc biệt trong làm đẹp da và tóc từ nước vo gạo</a>
+                                </div>
+                                <div class="news-description">
+                                    <p>Giàu vitamin và khoáng chất, nước vo gạo có đặc tính chống viêm, giúp làm sạch da mặt, dưỡng sán....<a href="./news.html">Xem thêm</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+        <div class="footer" id="lienhe">
+            <div class="row container-fluid footer-contact">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10 row justify-content-around">
+                    <div class="contact-info">
+                        <a href="" class="logo-link">
+                            <img src="../img/logo-weskin.svg" alt="" width="150px">
+                        </a>
+                        <div class="contact-info-title">
+                            <p>Shop mỹ phẩm We Skin</p>
+                            <p>Làm đẹp trở nên dễ dàng hơn</p>
+                        </div>
+                        <div class="contact-address">
+                            <p>Địa chỉ: Gò Vấp, TP.Hồ Chí Minh, Vietnam</p>
+                            <p>Hotline: 0101010101</p>
+                            <p>Email: weskin@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-customer row align-items-center">
+                        <div class="customer">
+                            <h3>Hỗ trợ khách hàng</h3>
+                            <div class="support">
+                                <ul>
+                                    <li><a href="">Trang chủ</a></li>
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Sản phẩm</a></li>
+                                    <li><a href="">Khuyến mãi</a></li>
+                                    <li><a href="">Tin tức</a></li>
+                                    <li><a href="">Liên Hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="customer">
+                            <h3>Chính sách</h3>
+                            <div class="support">
+                                <ul>
+                                    <li><a href="">Trang chủ</a></li>
+                                    <li><a href="">Giới thiệu</a></li>
+                                    <li><a href="">Sản phẩm</a></li>
+                                    <li><a href="">Khuyến mãi</a></li>
+                                    <li><a href="">Tin tức</a></li>
+                                    <li><a href="">Liên Hệ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-connect">
+                        <h3>Kết nối với chúng tôi</h3>
+                        <div class="connect-icon">
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                            <a href=""><i class="fa-brands fa-google"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <img src="../img/qrcode.jpg" alt="">
+                        <Figcaption>
+                            <H2 style="padding-right: 36px;">DONATE ME</H2>
+                        </Figcaption>
+                    </div>
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="footer-describe">
+                <p>&copy; Copyright 2022 |</p><a href="">Powered By Ha & Vinh</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(()=> {
+            $('.account').click(()=>{
+                $(location).attr('href', './profile.html');
+            })
+        })
+    </script>
+</body>
+
+</html>
