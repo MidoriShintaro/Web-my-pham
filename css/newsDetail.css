@@ -11,6 +11,10 @@
   --background-color: #fff3f3;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .login {
   padding-bottom: 16px;
 }
