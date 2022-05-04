@@ -417,7 +417,7 @@
         const cards =
             ` 
             <div class="cover-card col-md-6">
-                <a href="./newsdetail.html" onclick="setId(${news.id})">
+                <a href="newsdetail.html" onclick="setId(${news.id})">
                     <div class="card mt-5 mr-5">
                         <img class="card-img-top" src="${news.img}" alt="Card image cap">
                         <div class="card-body">
@@ -436,7 +436,7 @@
         $('.listNews').append(cards)
     }
     const setId = (id) => {
-        localStorage.setItem('id', id);
+        localStorage.setItem('idNews', id);
     }
     newsdata.forEach(el => {
         display(el)
