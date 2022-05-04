@@ -564,6 +564,10 @@ p {
   flex-wrap: wrap;
   width: 100%;
 }
+
+.cover-card a {
+  text-decoration: none;
+}
 .card-title,
 .card-text {
   color: #000;

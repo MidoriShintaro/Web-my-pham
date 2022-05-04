@@ -182,9 +182,9 @@
         <div class="col-md-1"></div>
         <div class="col-md-10 row news-content">
             <div class="col-md-9">
-                <div class="row">
-                    <h4>Tin Tức</h4>
-                    <div class="cover-card announcement"></div>
+                <h4>Tin Tức</h4>
+                <div class="row justify-content-between listNews">
+                    
                 </div>
             </div>
             <div class="col-md-3">
@@ -415,30 +415,32 @@
     const newsdata = JSON.parse(localStorage.getItem('news'))
     const display = (news) => {
         const cards =
-            ` <a href="newsdetail.html" onclick="setId(${news.id})">
-                        <div class="card mt-5 mr-5 col-sm-5 ">
-                            <img class="card-img-top" src="
-                            ${news.img}" alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">${news.name}</h5>
-                              <p class="card-text">
+            ` 
+            <div class="cover-card col-md-6">
+                <a href="newsdetail.html" onclick="setId(${news.id})">
+                    <div class="card mt-5 mr-5">
+                        <img class="card-img-top" src="${news.img}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">${news.name}</h5>
+                            <p class="card-text">
                                 <i class="fa-solid fa-user"></i>
-                                <span>Đăng bởi:${news.author}</span>
-                              </p>
-                            </div>
-                    </a>
-                        <div class="card-footer">
-                          <small class="text-muted">${news.description}</small>
+                                <span>Đăng bởi: ${news.author}</span>
+                            </p>
                         </div>
-                      </div>`
-        $('.cover-card').append(cards)
+                        <div class="card-footer">
+                            <small class="text-muted">${news.description}</small>
+                        </div>
+                    </div>
+                </a>
+            </div>`
+        $('.listNews').append(cards)
     }
     const setId = (id) => {
         localStorage.setItem('id', id);
     }
-    newsdata.forEach(
-        display
-    );
+    newsdata.forEach(el => {
+        display(el)
+    });
     $(document).ready(() => {
         $('.account').click(() => {
             $(location).attr('href', './profile.html');
