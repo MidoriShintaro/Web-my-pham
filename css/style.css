@@ -14,7 +14,7 @@
 html {
   scroll-behavior: smooth;
 }
-
+/* header */
 .login {
   padding-bottom: 16px;
 }
@@ -335,7 +335,7 @@ html {
   height: 10%;
   width: 50%;
 }
-
+/* body */
 .trademark {
   background-color: var(--background-color);
 }
@@ -433,67 +433,22 @@ p {
   display: flex;
   height: 400px;
   flex-direction: column;
+  border: 1px solid #999;
   background-color: var(--white-color);
+  justify-content: space-between;
   position: relative;
-  -webkit-transition: background 0.4s 0.5s;
-  transition: background 0.4s 0.5s;
 }
 
 .product-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   z-index: 1;
 }
 
 .product:hover {
-  -webkit-transition-delay: 0s;
-  transition-delay: 0s;
-}
-
-.product:hover svg line {
-  stroke: #ff6564;
-}
-
-.product svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.product:hover .top {
-  -webkit-transform: translateX(-600px);
-  transform: translateX(-600px);
-}
-
-.product:hover .left {
-  -webkit-transform: translateY(920px);
-  transform: translateY(920px);
-}
-
-.product:hover .bottom {
-  -webkit-transform: translateX(600px);
-  transform: translateX(600px);
-}
-
-.product:hover .right {
-  -webkit-transform: translateY(-920px);
-  transform: translateY(-920px);
-}
-
-.product svg line {
-  stroke-width: 3;
-  stroke: #babebe;
-  fill: none;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
-}
-
-.top,
-.bottom {
-  stroke-dasharray: 330 240;
-}
-
-.left,
-.right {
-  stroke-dasharray: 490 400;
+  border: 1px solid var(--primary-color);
 }
 
 .product-info {
@@ -663,6 +618,8 @@ p {
   color: var(--black-color);
   text-decoration: none;
 }
+
+/* footer */
 
 .footer-contact {
   background: url("../img/footer.webp") center / cover no-repeat;
