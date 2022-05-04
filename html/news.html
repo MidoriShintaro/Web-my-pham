@@ -343,7 +343,7 @@
             author: 'Vũ Thế Vinh',
             description: 'Nếu bạn đang có ý định làm đẹp đôi chân mày của mình nhưng không biết mẫu nào hót nhất trong năm....',
             content:
-            `   Nếu bạn đang có ý định làm đẹp đôi chân mày của mình nhưng không biết mẫu nào hót nhất  trong năm nay thì hãy nhanh chóng tham khảo xu hướng lông mày năm 2018 đang lên ngôi dưới đây nhé.<br><br>
+                `   Nếu bạn đang có ý định làm đẹp đôi chân mày của mình nhưng không biết mẫu nào hót nhất  trong năm nay thì hãy nhanh chóng tham khảo xu hướng lông mày năm 2018 đang lên ngôi dưới đây nhé.<br><br>
                 Lông mày tự nhiên lên ngôi cùng xu hướng trang điểm tự nhiên
                 Năm 2017 là năm lên ngôi của phong cách trang điểm Âu Mỹ, cùng với đó là lông mày phải được trau chuốt sắc sảo, đậm màu. Tuy nhiên đến năm 2018, phong cách trang điểm tự nhiên thế chỗ hoàn toàn, lông mày tự nhiên được ưa chuộng hơn và trở thành điểm nhấn khi trang điểm. Lông mày được tô điểm sắc nhọn theo phong cách Âu Mỹ – Nguồn: Zalebs<br><br>
                 Xu hướng tô điểm cho hàng lông mày trong năm 2017 đã cực kì đa dạng, nổi bật nhất phải kể đến chính là các kiểu lông mày sắc nhọn, được tô vẽ cẩn thận, càng sắc sảo càng đẹp.
@@ -365,8 +365,8 @@
             img: '../img/news4.png',
             author: 'Vũ Thế Vinh',
             description: 'Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đâ...',
-            content: 
-            `Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đây còn chinh phục các cô nàng bởi chỉ số chống nắng vượt trội.<br><br>
+            content:
+                `Ngoài sự tiện dụng chỉ sau vài phút là có một lớp trang điểm thật đẹp thì 3 loại cushion dưới đây còn chinh phục các cô nàng bởi chỉ số chống nắng vượt trội.<br><br>
             Cushion là một sản phẩm rất đa năng, thực hiện được cả chức năng của: kem lót, kem nền, che khuyết điểm và cả kem chống nắng. Chỉ với một hộp Cushion nhỏ đã giúp bạn tạo được lớp trang điểm hoàn hảo nếu như được tích hợp luôn cả khả năng chống nắng cao thì đúng là quá tuyệt vời. Cùng tham khảo ngay 3 loại cushion đang đứng top được lựa chọn nhiều nhất nhé!<br><br>
             1. Mamonde Brightening Cover Powder Cushion SPF50+/PA+++<br><br>
             Loại cushion mới này của nhà Mamonde này được bổ sung lớp bột phấn (powder), thay thế cả phấn phủ và vì thế khiến lớp nền bền màu và mịn màng hơn trong thời gian dài.<br><br>
@@ -392,8 +392,8 @@
             img: '../img/news2.png',
             author: 'Vũ Thế Vinh',
             description: 'Giàu vitamin và khoáng chất, nước vo gạo có đặc tính chống viêm, giúp làm sạch da mặt, dưỡng sán...',
-            content: 
-            `Giàu vitamin và khoáng chất, nước vo gạo có đặc tính chống viêm, giúp làm sạch da mặt, dưỡng sáng và mềm mịn da, bên cạnh đó còn giúp mái tóc suông mượt tự nhiên.<br><br>
+            content:
+                `Giàu vitamin và khoáng chất, nước vo gạo có đặc tính chống viêm, giúp làm sạch da mặt, dưỡng sáng và mềm mịn da, bên cạnh đó còn giúp mái tóc suông mượt tự nhiên.<br><br>
             Nhiều người có thói quen vo gạo rồi đổ bỏ nước đi. Tuy nhiên, họ không biết rằng nước gạo mang lại nhiều lợi ích cho làn da và mái tóc. Lý do đơn giản vì trong thành phần của nước vo gạo có rất nhiều vitamin và khoáng chất, chất chống oxy hóa cao,…dưới đây là một số lợi ích làm đẹp từ nước vo gạo mà bạn có thể áp dụng làm đẹp tại nhà.<br><br>
 
             Nước rửa mặt<br><br>
@@ -439,6 +439,11 @@
     newsdata.forEach(
         display
     );
+    $(document).ready(() => {
+        $('.account').click(() => {
+            $(location).attr('href', './profile.html');
+        })
+    })
 </script>
 
 </html>

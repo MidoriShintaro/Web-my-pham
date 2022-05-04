@@ -297,8 +297,11 @@
         $('.name-news').html(findid.name)
         $('.author').html(findid.author)
         $('.content').html(findid.content)
+
+        $('.account').click(() => {
+            $(location).attr('href', './profile.html');
+        })
     })
-    console.log(findid)
 </script>
 
 </html>

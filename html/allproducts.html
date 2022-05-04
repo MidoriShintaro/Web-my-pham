@@ -47,7 +47,6 @@
                                 <div class="dropdown">
                                     <i class="fa-solid fa-clipboard-user icon-user" id="dropdownMenuButton"
                                         aria-haspopup="true" aria-expanded="false"></i>
-
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         <a class="dropdown-item" href="login.html">Đăng Nhập</a>
                                         <a class="dropdown-item" href="registration.html">Đăng Kí</a>
@@ -564,25 +563,27 @@
                 }
             }
         }
-        // $(document).ready(() => {
-        //     $('#btn-search').click(() => {
-        //         const productCode = $('#search-text').val()
-        //         if (productCode.trim() === '' || productCode == '') {
-        //             $('.announcement').html('')
-        //             productData.forEach(display)
-        //             return true
-        //         }
-        //         const findproductCode = productData.find(el => el.productCode == productCode)
-        //         console.log(findproductCode)
-        //         if (findproductCode == undefined) {
-        //             $('.announcement').html('<i>Không tìm thấy sản phẩm</i>')
-        //             return false
-        //         }
-        //         $('.announcement').html('')
-        //         display(findproductCode)
-        //         return true;
-        //     })
-        // })
+        $(document).ready(() => {
+            $('#btn-search').click(() => {
+                const productCode = $('#search-text').val()
+                if (productCode.trim() === '' || productCode == '') {
+                    $('.announcement').html('')
+                    productData.forEach(display)
+                    return true
+                }
+                const findproductCode = productData.find(el => el.productCode == productCode)
+                if (findproductCode == undefined) {
+                    $('.announcement').html('<i>Không tìm thấy sản phẩm</i>')
+                    return false
+                }
+                $('.announcement').html('')
+                display(findproductCode)
+                return true;
+            })
+            $('.account').click(() => {
+                $(location).attr('href', './profile.html');
+            })
+        })
     </script>
 </body>
 

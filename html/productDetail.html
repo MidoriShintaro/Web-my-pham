@@ -429,6 +429,10 @@
             $('.information').html(findId.information)
             $('.productCode').html(findId.productCode)
             $('#img-product').attr('src', findId.img)
+
+            $('.account').click(() => {
+                $(location).attr('href', './profile.html');
+            })
         })
     </script>
 </body>
