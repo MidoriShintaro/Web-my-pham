@@ -467,7 +467,7 @@ html {
   margin: 0 10px;
   padding: 30px;
   display: flex;
-  height: 400px;
+  height: 450px;
   flex-direction: column;
   background-color: var(--white-color);
   position: relative;
